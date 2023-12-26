@@ -1,5 +1,5 @@
 canonical_name: "sprintprepaid_us"
-version: 30000000485
+version: 52000000002
 apns {
   apn {
     name: "Internet"
@@ -58,7 +58,7 @@ configs {
   }
   config {
     key: "carrier_eri_file_name_string"
-    text_value: "eri_310120.xml"
+    text_value: "eri.xml"
   }
   config {
     key: "carrier_settings_activity_component_name_string"
@@ -70,7 +70,7 @@ configs {
   }
   config {
     key: "cdma_3waycall_flash_delay_int"
-    int_value: 300
+    int_value: 0
   }
   config {
     key: "config_telephony_use_own_number_for_voicemail_bool"
@@ -99,12 +99,61 @@ configs {
     text_array {
       item: "com.android.omadm.service"
       item: "com.android.sdm.plugins.sprintdm"
-      item: "com.google.android.hiddenmenu"
     }
   }
   config {
     key: "httpParams"
     text_value: "X-MDN: ##LINE1##|Proxy-Authorization: Basic ##NAI##"
+  }
+  config {
+    key: "imsemergency.emergency_over_ims_supported_rats_int_array"
+    int_array {
+      item: 3
+    }
+  }
+  config {
+    key: "imsss.xcap_over_ut_supported_rats_int_array"
+    int_array {
+    }
+  }
+  config {
+    key: "imsvoice.audio_codec_capability_payload_types_bundle"
+    bundle {
+      config {
+        key: "imsvoice.amrnb_payload_type_int_array"
+        int_array {
+          item: 98
+          item: 103
+        }
+      }
+      config {
+        key: "imsvoice.amrwb_payload_type_int_array"
+        int_array {
+          item: 100
+          item: 105
+        }
+      }
+      config {
+        key: "imsvoice.dtmfnb_payload_type_int_array"
+        int_array {
+          item: 97
+        }
+      }
+      config {
+        key: "imsvoice.dtmfwb_payload_type_int_array"
+        int_array {
+          item: 96
+        }
+      }
+    }
+  }
+  config {
+    key: "imsvoice.include_caller_id_service_codes_in_sip_invite_bool"
+    bool_value: true
+  }
+  config {
+    key: "imswfc.emergency_call_over_emergency_pdn_bool"
+    bool_value: true
   }
   config {
     key: "maxImageHeight"
@@ -138,7 +187,7 @@ configs {
   }
   config {
     key: "show_cdma_choices_bool"
-    bool_value: true
+    bool_value: false
   }
   config {
     key: "smsToMmsTextThreshold"
@@ -154,7 +203,7 @@ configs {
   }
   config {
     key: "support_swap_after_merge_bool"
-    bool_value: false
+    bool_value: true
   }
   config {
     key: "use_hfa_for_provisioning_bool"
@@ -178,5 +227,5 @@ configs {
   }
 }
 8 {
-  1: 1622082274
+  1: 1691701640
 }

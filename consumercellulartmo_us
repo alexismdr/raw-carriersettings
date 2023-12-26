@@ -1,5 +1,5 @@
 canonical_name: "consumercellulartmo_us"
-version: 30000000565
+version: 52000000004
 apns {
   apn {
     name: "Consumer Cellular"
@@ -18,6 +18,7 @@ apns {
     protocol: IPV6
     mtu: 1440
     user_visible: false
+    28: 1
   }
   apn {
     name: "Consumer Cellular IMS"
@@ -28,6 +29,7 @@ apns {
     roaming_protocol: IPV6
     mtu: 1440
     user_visible: false
+    28: 1
   }
 }
 configs {
@@ -68,6 +70,122 @@ configs {
     text_array {
       item: "*272"
     }
+  }
+  config {
+    key: "ims.geolocation_pidf_in_sip_invite_support_int_array"
+    int_array {
+      item: 3
+      item: 1
+    }
+  }
+  config {
+    key: "ims.geolocation_pidf_in_sip_register_support_int_array"
+    int_array {
+      item: 3
+      item: 1
+    }
+  }
+  config {
+    key: "ims.ims_user_agent_string"
+    text_value: "T-Mobile EPSFB-ePDG-IR94-RTT-ussd #MANUFACTURE#/#MODEL# #BUILD#"
+  }
+  config {
+    key: "imsemergency.emergency_over_ims_supported_rats_int_array"
+    int_array {
+      item: 3
+    }
+  }
+  config {
+    key: "imsemergency.emergency_registration_timer_millis_int"
+    int_value: 10000
+  }
+  config {
+    key: "imsemergency.retry_emergency_on_ims_pdn_bool"
+    bool_value: true
+  }
+  config {
+    key: "imsss.ut_server_based_services_int_array"
+    int_array {
+      item: 20
+      item: 12
+      item: 18
+      item: 14
+      item: 19
+      item: 21
+      item: 15
+      item: 16
+      item: 17
+      item: 13
+      item: 1
+      item: 3
+      item: 4
+      item: 7
+      item: 6
+      item: 5
+      item: 2
+      item: 0
+      item: 8
+      item: 9
+      item: 11
+    }
+  }
+  config {
+    key: "imsss.ut_terminal_based_services_int_array"
+    int_array {
+      item: 10
+    }
+  }
+  config {
+    key: "imsss.xcap_over_ut_supported_rats_int_array"
+    int_array {
+    }
+  }
+  config {
+    key: "imsvoice.audio_codec_capability_payload_types_bundle"
+    bundle {
+      config {
+        key: "imsvoice.amrnb_payload_type_int_array"
+        int_array {
+          item: 98
+          item: 103
+        }
+      }
+      config {
+        key: "imsvoice.amrwb_payload_type_int_array"
+        int_array {
+          item: 100
+          item: 105
+        }
+      }
+      config {
+        key: "imsvoice.dtmfnb_payload_type_int_array"
+        int_array {
+          item: 97
+        }
+      }
+      config {
+        key: "imsvoice.dtmfwb_payload_type_int_array"
+        int_array {
+          item: 96
+        }
+      }
+    }
+  }
+  config {
+    key: "imsvoice.include_caller_id_service_codes_in_sip_invite_bool"
+    bool_value: true
+  }
+  config {
+    key: "imsvt.video_as_bandwidth_kbps_int"
+    int_value: 560
+  }
+  config {
+    key: "imsvt.video_rs_bandwidth_bps_int"
+    int_value: 5200
+  }
+  config {
+    key: "imsvt.video_rtp_dscp_int"
+    int_value: 34
   }
   config {
     key: "maxImageHeight"
@@ -132,5 +250,5 @@ configs {
   }
 }
 8 {
-  1: 1622082274
+  1: 1695599029
 }

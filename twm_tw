@@ -1,5 +1,5 @@
 canonical_name: "twm_tw"
-version: 30000000327
+version: 52000000006
 apns {
   apn {
     name: "\345\217\260\347\201\243\345\244\247\345\223\245\345\244\247(TW Mobile) (Internet)"
@@ -25,6 +25,12 @@ apns {
     protocol: IPV4V6
     user_visible: false
   }
+  apn {
+    name: "XCAP"
+    value: "hos"
+    type: XCAP
+    user_visible: false
+  }
 }
 configs {
   config {
@@ -38,6 +44,10 @@ configs {
   config {
     key: "allow_hold_call_during_emergency_bool"
     bool_value: false
+  }
+  config {
+    key: "bsf.bsf_server_fqdn_string"
+    text_value: "bsf.ims.taiwanmobile.com"
   }
   config {
     key: "carrier_default_wfc_ims_enabled_bool"
@@ -60,6 +70,16 @@ configs {
     text_value: "\345\217\260\347\201\243\345\244\247\345\223\245\345\244\247"
   }
   config {
+    key: "carrier_nr_availabilities_int_array"
+    int_array {
+      item: 1
+    }
+  }
+  config {
+    key: "carrier_supports_ss_over_ut_bool"
+    bool_value: true
+  }
+  config {
     key: "carrier_ussd_method_int"
     int_value: 2
   }
@@ -69,17 +89,119 @@ configs {
   }
   config {
     key: "carrier_wfc_ims_available_bool"
-    bool_value: false
+    bool_value: true
+  }
+  config {
+    key: "hide_enhanced_4g_lte_bool"
+    bool_value: true
   }
   config {
     key: "hide_lte_plus_data_icon_bool"
     bool_value: false
   }
   config {
+    key: "ims.sip_timer_f_millis_int"
+    int_value: 32000
+  }
+  config {
+    key: "ims.sip_timer_j_millis_int"
+    int_value: 32000
+  }
+  config {
     key: "ims_reasoninfo_mapping_string_array"
     text_array {
+      item: "510|Call completed elsewhere|1014"
       item: "*|Call is dropped due to Wi-Fi signal is degraded|1407"
     }
+  }
+  config {
+    key: "imssms.sms_over_ims_supported_rats_int_array"
+    int_array {
+    }
+  }
+  config {
+    key: "imsss.network_initiated_ussd_over_ims_supported_bool"
+    bool_value: false
+  }
+  config {
+    key: "imsss.ut_as_server_fqdn_string"
+    text_value: "xcap.ims.taiwanmobile.com"
+  }
+  config {
+    key: "imsss.ut_iptype_home_int"
+    int_value: 0
+  }
+  config {
+    key: "imsss.ut_iptype_roaming_int"
+    int_value: 0
+  }
+  config {
+    key: "imsss.xcap_over_ut_supported_rats_int_array"
+    int_array {
+      item: 6
+      item: 3
+      item: 5
+      item: 1
+      item: 2
+    }
+  }
+  config {
+    key: "imsvoice.audio_codec_capability_payload_types_bundle"
+    bundle {
+      config {
+        key: "imsvoice.amrnb_payload_type_int_array"
+        int_array {
+          item: 98
+          item: 103
+        }
+      }
+      config {
+        key: "imsvoice.amrwb_payload_type_int_array"
+        int_array {
+          item: 100
+          item: 105
+        }
+      }
+      config {
+        key: "imsvoice.dtmfnb_payload_type_int_array"
+        int_array {
+          item: 97
+        }
+      }
+      config {
+        key: "imsvoice.dtmfwb_payload_type_int_array"
+        int_array {
+          item: 96
+        }
+      }
+    }
+  }
+  config {
+    key: "imsvoice.conference_factory_uri_string"
+    text_value: "conf-factory@ims.taiwanmobile.com"
+  }
+  config {
+    key: "imsvoice.ringback_timer_millis_int"
+    int_value: 120000
+  }
+  config {
+    key: "imsvoice.ringing_timer_millis_int"
+    int_value: 120000
+  }
+  config {
+    key: "imsvoice.session_refresh_method_int"
+    int_value: 0
+  }
+  config {
+    key: "imsvoice.srvcc_type_int_array"
+    int_array {
+      item: 0
+      item: 2
+    }
+  }
+  config {
+    key: "imsvt.video_qos_precondition_supported_bool"
+    bool_value: false
   }
   config {
     key: "is_ims_conference_size_enforced_bool"
@@ -135,8 +257,16 @@ configs {
     bool_value: true
   }
   config {
+    key: "min_udp_port_4500_nat_timeout_sec_int"
+    int_value: 120
+  }
+  config {
     key: "nr_timers_reset_if_non_endc_and_rrc_idle_bool"
     bool_value: true
+  }
+  config {
+    key: "qns.xcap_transport_type_int"
+    int_value: 0
   }
   config {
     key: "support_ims_conference_event_package_bool"
@@ -152,5 +282,5 @@ configs {
   }
 }
 8 {
-  1: 1625805535
+  1: 1695102015
 }

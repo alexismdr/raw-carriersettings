@@ -1,5 +1,5 @@
 canonical_name: "movistar_es"
-version: 30000000515
+version: 52000000006
 apns {
   apn {
     name: "Movistar"
@@ -24,12 +24,28 @@ apns {
     roaming_protocol: IPV4V6
     user_visible: false
   }
+  apn {
+    name: "XCAP"
+    value: "XCAP"
+    type: XCAP
+    bearer_bitmask: "1|2|3|9|10|11|13|14|15|20"
+    protocol: IPV4V6
+    user_visible: false
+  }
 }
 configs {
   config {
+    key: "bsf.bsf_server_port_int"
+    int_value: 8088
+  }
+  config {
+    key: "call_redirection_service_component_name_string"
+    text_value: "com.movistar.android.mimovistar.es/com.tuenti.messenger.callinterceptor.CallInterceptorService"
+  }
+  config {
     key: "carrier_certificate_string_array"
     text_array {
-      item: "8C960CA3CBF4A9DA851774F2DE072E57B1289A9CF7D6BDA4A6B386A42BC4FFB3"
+      item: "e1b6e6cbfe0673164931be46d95fa7e43fb92dac49acc10a6c0909e5eada15fa"
     }
   }
   config {
@@ -37,8 +53,14 @@ configs {
     bool_value: true
   }
   config {
+    key: "carrier_nr_availabilities_int_array"
+    int_array {
+      item: 1
+    }
+  }
+  config {
     key: "carrier_supports_ss_over_ut_bool"
-    bool_value: false
+    bool_value: true
   }
   config {
     key: "carrier_ussd_method_int"
@@ -46,11 +68,11 @@ configs {
   }
   config {
     key: "carrier_volte_available_bool"
-    bool_value: false
+    bool_value: true
   }
   config {
     key: "carrier_wfc_ims_available_bool"
-    bool_value: false
+    bool_value: true
   }
   config {
     key: "default_vm_number_string"
@@ -59,6 +81,144 @@ configs {
   config {
     key: "ims_conference_size_limit_int"
     int_value: 4
+  }
+  config {
+    key: "imsemergency.emergency_over_ims_supported_rats_int_array"
+    int_array {
+      item: 3
+    }
+  }
+  config {
+    key: "imssms.sms_over_ims_supported_rats_int_array"
+    int_array {
+    }
+  }
+  config {
+    key: "imsss.network_initiated_ussd_over_ims_supported_bool"
+    bool_value: false
+  }
+  config {
+    key: "imsss.use_csfb_on_xcap_over_ut_failure_bool"
+    bool_value: false
+  }
+  config {
+    key: "imsss.ut_as_server_port_int"
+    int_value: 8089
+  }
+  config {
+    key: "imsss.xcap_over_ut_supported_rats_int_array"
+    int_array {
+      item: 6
+      item: 3
+      item: 1
+      item: 2
+    }
+  }
+  config {
+    key: "imsvoice.amrnb_payload_description_bundle"
+    bundle {
+      config {
+        key: "108"
+        bundle {
+          config {
+            key: "imsvoice.amr_codec_attribute_payload_format_int"
+            int_value: 1
+          }
+        }
+      }
+    }
+  }
+  config {
+    key: "imsvoice.amrwb_payload_description_bundle"
+    bundle {
+      config {
+        key: "110"
+        bundle {
+          config {
+            key: "imsvoice.amr_codec_attribute_payload_format_int"
+            int_value: 1
+          }
+        }
+      }
+    }
+  }
+  config {
+    key: "imsvoice.audio_codec_capability_payload_types_bundle"
+    bundle {
+      config {
+        key: "imsvoice.amrnb_payload_type_int_array"
+        int_array {
+          item: 102
+          item: 108
+        }
+      }
+      config {
+        key: "imsvoice.amrwb_payload_type_int_array"
+        int_array {
+          item: 104
+          item: 110
+        }
+      }
+      config {
+        key: "imsvoice.dtmfnb_payload_type_int_array"
+        int_array {
+          item: 97
+        }
+      }
+      config {
+        key: "imsvoice.dtmfwb_payload_type_int_array"
+        int_array {
+          item: 96
+        }
+      }
+      config {
+        key: "imsvoice.evs_payload_type_int_array"
+        int_array {
+          item: 126
+        }
+      }
+    }
+  }
+  config {
+    key: "imsvoice.conference_subscribe_type_int"
+    int_value: 0
+  }
+  config {
+    key: "imsvoice.evs_payload_description_bundle"
+    bundle {
+      config {
+        key: "126"
+        bundle {
+          config {
+            key: "imsvoice.evs_codec_attribute_bitrate_int_array"
+            int_array {
+              item: 3
+              item: 6
+            }
+          }
+        }
+      }
+    }
+  }
+  config {
+    key: "imsvoice.oip_source_from_header_bool"
+    bool_value: true
+  }
+  config {
+    key: "imsvoice.prack_supported_for_18x_bool"
+    bool_value: true
+  }
+  config {
+    key: "imsvoice.session_refresh_method_int"
+    int_value: 0
+  }
+  config {
+    key: "imsvoice.srvcc_type_int_array"
+    int_array {
+      item: 0
+      item: 1
+      item: 3
+    }
   }
   config {
     key: "is_ims_conference_size_enforced_bool"
@@ -79,8 +239,8 @@ configs {
   config {
     key: "iwlan.diffie_hellman_groups_int_array"
     int_array {
-      item: 16
       item: 14
+      item: 16
     }
   }
   config {
@@ -137,6 +297,10 @@ configs {
     }
   }
   config {
+    key: "qns.xcap_transport_type_int"
+    int_value: 0
+  }
+  config {
     key: "show_4g_for_lte_data_icon_bool"
     bool_value: true
   }
@@ -156,5 +320,5 @@ configs {
   }
 }
 8 {
-  1: 1628627124
+  1: 1695248271
 }

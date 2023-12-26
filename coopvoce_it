@@ -1,0 +1,29 @@
+canonical_name: "coopvoce_it"
+version: 52000000001
+apns {
+  apn {
+    name: "WEB CoopVoce"
+    value: "internet.coopvoce.it"
+    type: DEFAULT
+    type: SUPL
+    type: DUN
+  }
+  apn {
+    name: "MMS CoopVoce"
+    value: "message.coopvoce.it"
+    type: MMS
+    mmsc: "http://mms.coop.it/servlets/mms"
+    mmsc_proxy: "213.230.130.89"
+    mmsc_proxy_port: "80"
+  }
+}
+configs {
+  config {
+    key: "read_only_apn_types_string_array"
+    text_array {
+    }
+  }
+}
+8 {
+  1: 1692383766
+}

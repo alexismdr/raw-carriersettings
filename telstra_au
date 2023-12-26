@@ -1,5 +1,5 @@
 canonical_name: "telstra_au"
-version: 30000000544
+version: 52000000013
 apns {
   apn {
     name: "Telstra Broadband"
@@ -11,6 +11,7 @@ apns {
     name: "Telstra IMS"
     value: "ims"
     type: IMS
+    bearer_bitmask: "14|18|20"
     protocol: IPV4V6
     roaming_protocol: IPV4V6
     user_visible: false
@@ -20,7 +21,9 @@ apns {
     name: "Telstra Internet"
     value: "telstra.wap"
     type: DEFAULT
+    type: IA
     type: SUPL
+    protocol: IPV6
   }
   apn {
     name: "Telstra MMS"
@@ -30,8 +33,18 @@ apns {
     mmsc_proxy: "10.1.1.180"
     mmsc_proxy_port: "80"
   }
+  apn {
+    name: "Telstra XCAP"
+    value: "hos"
+    type: XCAP
+    user_visible: false
+  }
 }
 configs {
+  config {
+    key: "5g_icon_configuration_string"
+    text_value: "connected_mmwave:5G_Plus,connected:5G,not_restricted_rrc_idle:5G,not_restricted_rrc_con:5G"
+  }
   config {
     key: "carrier_default_wfc_ims_enabled_bool"
     bool_value: true
@@ -50,6 +63,13 @@ configs {
       item: "default"
       item: "dun"
       item: "supl"
+    }
+  }
+  config {
+    key: "carrier_nr_availabilities_int_array"
+    int_array {
+      item: 1
+      item: 2
     }
   }
   config {
@@ -77,6 +97,10 @@ configs {
     text_value: "+61101"
   }
   config {
+    key: "display_hd_plus_icon_bool"
+    bool_value: true
+  }
+  config {
     key: "editable_tether_apn_bool"
     bool_value: true
   }
@@ -89,12 +113,106 @@ configs {
     bool_value: true
   }
   config {
+    key: "ims.geolocation_pidf_in_sip_invite_support_int_array"
+    int_array {
+      item: 4
+      item: 2
+    }
+  }
+  config {
+    key: "ims.geolocation_pidf_in_sip_register_support_int_array"
+    int_array {
+      item: 4
+      item: 2
+    }
+  }
+  config {
+    key: "ims.ims_user_agent_string"
+    text_value: "Telstra #MANUFACTURE# #HWSKU# Android#AV# #BUILD#"
+  }
+  config {
+    key: "ims.ipv4_sip_mtu_size_cellular_int"
+    int_value: 1400
+  }
+  config {
+    key: "ims.ipv6_sip_mtu_size_cellular_int"
+    int_value: 1400
+  }
+  config {
+    key: "ims.sip_timer_f_millis_int"
+    int_value: 32000
+  }
+  config {
+    key: "ims.sip_timer_j_millis_int"
+    int_value: 32000
+  }
+  config {
     key: "ims_reasoninfo_mapping_string_array"
     text_array {
       item: "338|busy everywhere|1404"
       item: "501|Call Completed Elsewhere|1014"
+      item: "510|Call completed elsewhere|1014"
       item: "*|Call is dropped due to Wi-Fi signal is degraded|1407"
     }
+  }
+  config {
+    key: "imsemergency.emergency_over_ims_supported_rats_int_array"
+    int_array {
+      item: 6
+      item: 3
+      item: 5
+    }
+  }
+  config {
+    key: "imsss.network_initiated_ussd_over_ims_supported_bool"
+    bool_value: false
+  }
+  config {
+    key: "imsss.xcap_over_ut_supported_rats_int_array"
+    int_array {
+      item: 5
+      item: 6
+      item: 3
+      item: 1
+      item: 2
+    }
+  }
+  config {
+    key: "imsvoice.conference_subscribe_type_int"
+    int_value: 0
+  }
+  config {
+    key: "imsvoice.evs_payload_description_bundle"
+    bundle {
+      config {
+        key: "127"
+        bundle {
+          config {
+            key: "imsvoice.evs_codec_attribute_bitrate_int_array"
+            int_array {
+              item: 0
+              item: 6
+            }
+          }
+        }
+      }
+    }
+  }
+  config {
+    key: "imsvoice.minimum_session_expires_timer_sec_int"
+    int_value: 600
+  }
+  config {
+    key: "imsvoice.ringing_timer_millis_int"
+    int_value: 45000
+  }
+  config {
+    key: "imsvoice.session_expires_timer_sec_int"
+    int_value: 3600
+  }
+  config {
+    key: "imsvt.video_as_bandwidth_kbps_int"
+    int_value: 408
   }
   config {
     key: "is_ims_conference_size_enforced_bool"
@@ -111,6 +229,15 @@ configs {
   config {
     key: "iwlan.dpd_timer_sec_int"
     int_value: 1740
+  }
+  config {
+    key: "iwlan_handover_policy_string_array"
+    text_array {
+      item: "source=GERAN|UTRAN|EUTRAN|NGRAN|IWLAN|UNKNOWN, target=GERAN|UTRAN|EUTRAN|NGRAN|IWLAN, type=disallowed, capabilities=EIMS|MMS|CBS"
+      item: "source=IWLAN|UNKNOWN, target=GERAN|UTRAN, type=disallowed, capabilities=IMS|XCAP"
+      item: "source=GERAN|UTRAN, target=IWLAN, type=disallowed, capabilities=IMS|XCAP"
+      item: "source=EUTRAN|NGRAN|IWLAN, target=EUTRAN|NGRAN|IWLAN, type=allowed, capabilities=IMS|XCAP"
+    }
   }
   config {
     key: "lte_rsrp_thresholds_int_array"
@@ -134,8 +261,83 @@ configs {
     int_value: 2097152
   }
   config {
+    key: "min_udp_port_4500_nat_timeout_sec_int"
+    int_value: 120
+  }
+  config {
     key: "prefer_2g_bool"
     bool_value: false
+  }
+  config {
+    key: "preferred_ike_protocol_int"
+    int_value: 40
+  }
+  config {
+    key: "qns.idle_eutran_rsrp_int_array"
+    int_array {
+      item: -110
+      item: -118
+    }
+  }
+  config {
+    key: "qns.idle_eutran_rsrq_int_array"
+    int_array {
+      item: -14
+      item: -16
+    }
+  }
+  config {
+    key: "qns.idle_utran_rscp_int_array"
+    int_array {
+      item: -106
+      item: -110
+    }
+  }
+  config {
+    key: "qns.mms_rat_preference_int"
+    int_value: 2
+  }
+  config {
+    key: "qns.video_eutran_rsrp_int_array"
+    int_array {
+      item: -110
+      item: -118
+    }
+  }
+  config {
+    key: "qns.video_eutran_rsrq_int_array"
+    int_array {
+      item: -14
+      item: -16
+    }
+  }
+  config {
+    key: "qns.video_utran_rscp_int_array"
+    int_array {
+      item: -106
+      item: -110
+    }
+  }
+  config {
+    key: "qns.voice_eutran_rsrp_int_array"
+    int_array {
+      item: -110
+      item: -118
+    }
+  }
+  config {
+    key: "qns.voice_eutran_rsrq_int_array"
+    int_array {
+      item: -14
+      item: -16
+    }
+  }
+  config {
+    key: "qns.voice_utran_rscp_int_array"
+    int_array {
+      item: -106
+      item: -110
+    }
   }
   config {
     key: "read_only_apn_types_string_array"
@@ -150,7 +352,15 @@ configs {
     key: "volte_replacement_rat_int"
     int_value: 3
   }
+  config {
+    key: "vonr_enabled_bool"
+    bool_value: true
+  }
+  config {
+    key: "vonr_on_by_default_bool"
+    bool_value: false
+  }
 }
 8 {
-  1: 1622082274
+  1: 1699597871
 }

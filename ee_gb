@@ -1,5 +1,5 @@
 canonical_name: "ee_gb"
-version: 30000000025
+version: 52000000007
 apns {
   apn {
     name: "IMS"
@@ -9,7 +9,8 @@ apns {
     user: "eesecure"
     password: "secure"
     authtype: 1
-    protocol: IPV6
+    protocol: IPV4V6
+    roaming_protocol: IPV4V6
     user_visible: false
   }
   apn {
@@ -21,12 +22,14 @@ apns {
     password: "secure"
     authtype: 1
     protocol: IPV4V6
+    roaming_protocol: IPV4V6
     user_editable: false
   }
   apn {
     name: "EE MMS"
     value: "eezone"
     type: MMS
+    type: XCAP
     user: "eesecure"
     password: "secure"
     authtype: 1
@@ -39,15 +42,19 @@ apns {
     name: "EE Emergency"
     value: "sos"
     type: EMERGENCY
-    protocol: IPV6
-    roaming_protocol: IPV6
+    protocol: IPV4V6
+    roaming_protocol: IPV4V6
     user_visible: false
   }
 }
 configs {
   config {
-    key: "carrier_default_data_roaming_enabled_bool"
+    key: "carrier_cross_sim_ims_available_bool"
     bool_value: false
+  }
+  config {
+    key: "carrier_default_data_roaming_enabled_bool"
+    bool_value: true
   }
   config {
     key: "carrier_name_override_bool"
@@ -56,6 +63,13 @@ configs {
   config {
     key: "carrier_name_string"
     text_value: "EE"
+  }
+  config {
+    key: "carrier_nr_availabilities_int_array"
+    int_array {
+      item: 1
+      item: 2
+    }
   }
   config {
     key: "carrier_supports_ss_over_ut_bool"
@@ -90,12 +104,93 @@ configs {
     bool_value: true
   }
   config {
+    key: "hide_enhanced_4g_lte_bool"
+    bool_value: true
+  }
+  config {
     key: "hide_ims_apn_bool"
     bool_value: true
   }
   config {
     key: "hide_preferred_network_type_bool"
-    bool_value: false
+    bool_value: true
+  }
+  config {
+    key: "ims.geolocation_pidf_in_sip_invite_support_int_array"
+    int_array {
+      item: 3
+      item: 1
+    }
+  }
+  config {
+    key: "ims.geolocation_pidf_in_sip_register_support_int_array"
+    int_array {
+      item: 3
+      item: 1
+    }
+  }
+  config {
+    key: "ims.ims_user_agent_string"
+    text_value: "#MANUFACTURE#_#MODEL#_#BUILD#"
+  }
+  config {
+    key: "imsemergency.emergency_over_ims_supported_rats_int_array"
+    int_array {
+      item: 3
+    }
+  }
+  config {
+    key: "imsss.ut_iptype_home_int"
+    int_value: 0
+  }
+  config {
+    key: "imsss.ut_iptype_roaming_int"
+    int_value: 0
+  }
+  config {
+    key: "imsss.xcap_over_ut_supported_rats_int_array"
+    int_array {
+      item: 5
+      item: 6
+      item: 3
+      item: 1
+      item: 2
+    }
+  }
+  config {
+    key: "imsvoice.audio_codec_capability_payload_types_bundle"
+    bundle {
+      config {
+        key: "imsvoice.amrnb_payload_type_int_array"
+        int_array {
+          item: 98
+          item: 103
+        }
+      }
+      config {
+        key: "imsvoice.amrwb_payload_type_int_array"
+        int_array {
+          item: 100
+          item: 105
+        }
+      }
+      config {
+        key: "imsvoice.dtmfnb_payload_type_int_array"
+        int_array {
+          item: 97
+        }
+      }
+      config {
+        key: "imsvoice.dtmfwb_payload_type_int_array"
+        int_array {
+          item: 96
+        }
+      }
+    }
+  }
+  config {
+    key: "imswfc.emergency_call_over_emergency_pdn_bool"
+    bool_value: true
   }
   config {
     key: "iwlan.ike_rekey_hard_timer_in_sec"
@@ -108,6 +203,18 @@ configs {
   config {
     key: "iwlan.key_error_policy_config_string"
     text_value: "[{\"ApnName\": \"*\",\"ErrorTypes\": [{\"ErrorType\": \"IKE_PROTOCOL_ERROR_TYPE\",\"ErrorDetails\": [\"24\"],\"RetryArray\": [\"10\", \"30\", \"60\", \"120\", \"300\", \"-1\"],\"UnthrottlingEvents\": [\"APM_ENABLE_EVENT\", \"WIFI_DISABLE_EVENT\", \"WIFI_AP_CHANGED_EVENT\", \"WIFI_CALLING_DISABLE_EVENT\"]}]}]"
+  }
+  config {
+    key: "iwlan_handover_policy_string_array"
+    text_array {
+      item: "source=GERAN|UTRAN|EUTRAN|NGRAN|IWLAN|UNKNOWN, target=GERAN|UTRAN|EUTRAN|NGRAN|IWLAN, type=disallowed, capabilities=MMS|XCAP|CBS"
+      item: "source=GERAN|UTRAN|EUTRAN|NGRAN|UNKNOWN, target=IWLAN, type=disallowed, capabilities=EIMS"
+      item: "source=IWLAN|UNKNOWN, target=GERAN|UTRAN, type=disallowed, capabilities=EIMS"
+      item: "source=IWLAN, target=EUTRAN|NGRAN, type=allowed, capabilities=EIMS"
+      item: "source=IWLAN|UNKNOWN, target=GERAN|UTRAN, type=disallowed, capabilities=IMS"
+      item: "source=GERAN|UTRAN, target=IWLAN, type=disallowed, capabilities=IMS"
+      item: "source=EUTRAN|NGRAN|IWLAN, target=EUTRAN|NGRAN|IWLAN, type=allowed, capabilities=IMS"
+    }
   }
   config {
     key: "non_roaming_operator_string_array"
@@ -123,6 +230,22 @@ configs {
   config {
     key: "prefer_2g_bool"
     bool_value: false
+  }
+  config {
+    key: "preferred_ike_protocol_int"
+    int_value: 40
+  }
+  config {
+    key: "qns.mms_rat_preference_int"
+    int_value: 2
+  }
+  config {
+    key: "qns.sos_transport_type_int"
+    int_value: 2
+  }
+  config {
+    key: "qns.xcap_rat_preference_int"
+    int_value: 2
   }
   config {
     key: "show_4g_for_lte_data_icon_bool"
@@ -144,5 +267,5 @@ configs {
   }
 }
 8 {
-  1: 1628627124
+  1: 1692898844
 }

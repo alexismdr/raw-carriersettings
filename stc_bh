@@ -1,0 +1,44 @@
+canonical_name: "stc_bh"
+version: 52000000001
+apns {
+  apn {
+    name: "VIVAGPRS"
+    value: "viva.bh"
+    type: DEFAULT
+    type: SUPL
+  }
+  apn {
+    name: "VIVAWAP"
+    value: "vivawap.bh"
+    type: DEFAULT
+    type: SUPL
+    proxy: "172.18.142.36"
+    port: "8080"
+  }
+  apn {
+    name: "VIVAMMS"
+    value: "vivawap.bh"
+    type: MMS
+    mmsc: "http://mms.viva.com.bh:38090"
+    mmsc_proxy: "172.18.142.36"
+    mmsc_proxy_port: "8080"
+  }
+  apn {
+    name: "IMS"
+    value: "ims"
+    type: IMS
+    bearer_bitmask: "14|20"
+    protocol: IPV4V6
+    roaming_protocol: IPV4V6
+    user_visible: false
+  }
+}
+configs {
+  config {
+    key: "carrier_volte_available_bool"
+    bool_value: true
+  }
+}
+8 {
+  1: 1695248271
+}

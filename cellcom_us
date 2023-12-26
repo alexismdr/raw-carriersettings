@@ -1,5 +1,5 @@
 canonical_name: "cellcom_us"
-version: 30000000489
+version: 52000000008
 apns {
   apn {
     name: "Cellcom"
@@ -59,6 +59,14 @@ apns {
     max_conns_time: 300
     modem_cognitive: true
   }
+  apn {
+    name: "Verizon Emergency"
+    value: "VZWEMERGENCY"
+    type: EMERGENCY
+    protocol: IPV4V6
+    roaming_protocol: IPV4V6
+    user_visible: false
+  }
 }
 configs {
   config {
@@ -90,6 +98,10 @@ configs {
       item: 5
       item: 13
     }
+  }
+  config {
+    key: "additional_settings_caller_id_visibility_bool"
+    bool_value: false
   }
   config {
     key: "aliasEnabled"
@@ -144,25 +156,6 @@ configs {
     bool_value: false
   }
   config {
-    key: "carrier_data_call_permanent_failure_strings"
-    text_array {
-      item: "OPERATOR_BARRED"
-      item: "MISSING_UNKNOWN_APN"
-      item: "UNKNOWN_PDP_ADDRESS_TYPE"
-      item: "USER_AUTHENTICATION"
-      item: "SERVICE_OPTION_NOT_SUPPORTED"
-      item: "SERVICE_OPTION_NOT_SUBSCRIBED"
-      item: "NSAPI_IN_USE"
-      item: "ONLY_IPV4_ALLOWED"
-      item: "ONLY_IPV6_ALLOWED"
-      item: "RADIO_POWER_OFF"
-      item: "TETHERED_CALL_ACTIVE"
-      item: "RADIO_NOT_AVAILABLE"
-      item: "UNACCEPTABLE_NETWORK_PARAMETER"
-      item: "SIGNAL_LOST"
-    }
-  }
-  config {
     key: "carrier_data_call_retry_network_requested_max_count_int"
     int_value: 20
   }
@@ -180,7 +173,7 @@ configs {
   }
   config {
     key: "carrier_eri_file_name_string"
-    text_value: "eri_311480.xml"
+    text_value: "eri.xml"
   }
   config {
     key: "carrier_metered_apn_types_strings"
@@ -203,6 +196,12 @@ configs {
   config {
     key: "carrier_name_string"
     text_value: "Cellcom"
+  }
+  config {
+    key: "carrier_nr_availabilities_int_array"
+    int_array {
+      item: 1
+    }
   }
   config {
     key: "carrier_provisioning_app_string"
@@ -234,31 +233,21 @@ configs {
   }
   config {
     key: "cdma_3waycall_flash_delay_int"
-    int_value: 300
+    int_value: 0
   }
   config {
     key: "cdma_enhanced_roaming_indicator_for_home_network_int_array"
     int_array {
-      item: 64
-      item: 65
-      item: 66
-      item: 76
-      item: 77
-      item: 78
-      item: 79
-      item: 80
-      item: 81
-      item: 82
-      item: 83
+      item: 1
     }
   }
   config {
     key: "cdma_home_registered_plmn_name_override_bool"
-    bool_value: true
+    bool_value: false
   }
   config {
     key: "cdma_home_registered_plmn_name_string"
-    text_value: "Cellcom"
+    text_value: ""
   }
   config {
     key: "cdma_nonroaming_networks_string_array"
@@ -615,7 +604,7 @@ configs {
   }
   config {
     key: "disable_cdma_activation_code_bool"
-    bool_value: true
+    bool_value: false
   }
   config {
     key: "disable_severe_when_extreme_disabled_bool"
@@ -659,16 +648,12 @@ configs {
       item: "com.customermobile.preload.vzw"
       item: "com.verizon.llkagent"
       item: "com.verizon.mips.services"
-      item: "com.verizon.obdm"
-      item: "com.verizon.obdm_permissions"
       item: "com.verizon.services"
       item: "com.vzw.apnlib"
       item: "com.android.omadm.service"
       item: "com.android.sdm.plugins.connmo"
       item: "com.android.sdm.plugins.dcmo"
       item: "com.android.sdm.plugins.diagmon"
-      item: "com.android.vzwomatrigger"
-      item: "com.htc.omadm.trigger"
       item: "com.google.omadm.trigger"
     }
   }
@@ -693,7 +678,7 @@ configs {
   }
   config {
     key: "force_imei_bool"
-    bool_value: true
+    bool_value: false
   }
   config {
     key: "gps.lpp_profile"
@@ -723,12 +708,55 @@ configs {
     bool_value: true
   }
   config {
+    key: "ims.geolocation_pidf_in_sip_invite_support_int_array"
+    int_array {
+      item: 3
+      item: 1
+    }
+  }
+  config {
+    key: "ims.geolocation_pidf_in_sip_register_support_int_array"
+    int_array {
+      item: 3
+      item: 1
+    }
+  }
+  config {
+    key: "ims.ims_pdn_enabled_in_no_vops_support_int_array"
+    int_array {
+      item: 1
+    }
+  }
+  config {
+    key: "ims.ims_user_agent_string"
+    text_value: "#MANUFACTURE#---#MODEL#---#BUILD#"
+  }
+  config {
+    key: "ims.mmtel_requires_provisioning_bundle"
+    bundle {
+      config {
+        key: "ims.capability_type_video_int_array"
+        int_array {
+          item: 0
+        }
+      }
+      config {
+        key: "ims.capability_type_voice_int_array"
+        int_array {
+          item: 0
+          item: 1
+        }
+      }
+    }
+  }
+  config {
     key: "ims_reasoninfo_mapping_string_array"
     text_array {
       item: "332|simultaneous call limit has already been reached|1403"
       item: "332|Forbidden: Simultaneous Call Limit Has Already Been Reached|1403"
       item: "338|another device sent all devices busy response|1404"
       item: "501|call completion elsewhere|1014"
+      item: "510|Call Completion Elsewhere|1014"
       item: "501|call has been pulled by another device|1016"
       item: "510|call has been pulled by another device|1016"
       item: "501|another device sent all devices busy response|1404"
@@ -736,6 +764,76 @@ configs {
       item: "1014|call has been pulled by another device|1016"
       item: "*|Call is dropped due to Wi-Fi signal is degraded|1407"
     }
+  }
+  config {
+    key: "imsemergency.emergency_over_ims_supported_rats_int_array"
+    int_array {
+      item: 3
+    }
+  }
+  config {
+    key: "imsemergency.refresh_geolocation_timeout_millis_int"
+    int_value: 2000
+  }
+  config {
+    key: "imsss.xcap_over_ut_supported_rats_int_array"
+    int_array {
+    }
+  }
+  config {
+    key: "imsvoice.audio_codec_capability_payload_types_bundle"
+    bundle {
+      config {
+        key: "imsvoice.amrnb_payload_type_int_array"
+        int_array {
+          item: 98
+          item: 103
+        }
+      }
+      config {
+        key: "imsvoice.amrwb_payload_type_int_array"
+        int_array {
+          item: 100
+          item: 105
+        }
+      }
+      config {
+        key: "imsvoice.dtmfnb_payload_type_int_array"
+        int_array {
+          item: 97
+        }
+      }
+      config {
+        key: "imsvoice.dtmfwb_payload_type_int_array"
+        int_array {
+          item: 96
+        }
+      }
+    }
+  }
+  config {
+    key: "imsvoice.include_caller_id_service_codes_in_sip_invite_bool"
+    bool_value: true
+  }
+  config {
+    key: "imsvoice.multiendpoint_supported_bool"
+    bool_value: true
+  }
+  config {
+    key: "imsvt.video_as_bandwidth_kbps_int"
+    int_value: 425
+  }
+  config {
+    key: "imsvt.video_rr_bandwidth_bps_int"
+    int_value: 28800
+  }
+  config {
+    key: "imsvt.video_rs_bandwidth_bps_int"
+    int_value: 9600
+  }
+  config {
+    key: "imswfc.emergency_call_over_emergency_pdn_bool"
+    bool_value: true
   }
   config {
     key: "inflate_signal_strength_bool"
@@ -880,7 +978,7 @@ configs {
   }
   config {
     key: "show_apn_setting_cdma_bool"
-    bool_value: true
+    bool_value: false
   }
   config {
     key: "sim_country_iso_override_string"
@@ -892,6 +990,10 @@ configs {
   }
   config {
     key: "sms_requires_destination_number_conversion_bool"
+    bool_value: true
+  }
+  config {
+    key: "spn_display_rule_use_roaming_from_service_state_bool"
     bool_value: true
   }
   config {
@@ -908,11 +1010,20 @@ configs {
   }
   config {
     key: "support_swap_after_merge_bool"
-    bool_value: false
+    bool_value: true
   }
   config {
     key: "support_wps_over_ims_bool"
     bool_value: false
+  }
+  config {
+    key: "telephony_data_setup_retry_rules_string_array"
+    text_array {
+      item: "capabilities=eims, retry_interval=1000, maximum_retries=20"
+      item: "permanent_fail_causes=8|27|28|29|32|33|35|50|51|-5|-6|65538|-3, retry_interval=2500"
+      item: "capabilities=mms|supl|cbs, retry_interval=2000"
+      item: "capabilities=internet|enterprise|dun|ims|fota, retry_interval=2500|3000|5000|10000|15000|20000|40000|60000|120000|240000|600000|1200000|1800000, maximum_retries=20"
+    }
   }
   config {
     key: "treat_downgraded_video_calls_as_video_calls_bool"
@@ -920,7 +1031,7 @@ configs {
   }
   config {
     key: "tty_supported_bool"
-    bool_value: true
+    bool_value: false
   }
   config {
     key: "uaProfTagName"
@@ -956,9 +1067,9 @@ configs {
   }
   config {
     key: "world_mode_enabled_bool"
-    bool_value: true
+    bool_value: false
   }
 }
 8 {
-  1: 1628001617
+  1: 1695599029
 }

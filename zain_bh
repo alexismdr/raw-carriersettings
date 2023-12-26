@@ -1,0 +1,53 @@
+canonical_name: "zain_bh"
+version: 52000000001
+apns {
+  apn {
+    name: "Zain BH Internet"
+    value: "internet"
+    type: DEFAULT
+    type: SUPL
+    user: "internet"
+    password: "internet"
+    authtype: 0
+  }
+  apn {
+    name: "Zain BH WAP"
+    value: "wap"
+    type: DEFAULT
+    type: SUPL
+    proxy: "172.18.85.33"
+    port: "80"
+    user: "wap"
+    password: "wap"
+    authtype: 0
+  }
+  apn {
+    name: "Zain BH MMS"
+    value: "mms"
+    type: MMS
+    user: "mms"
+    password: "mms"
+    authtype: 0
+    mmsc: "http://172.18.83.129:80/"
+    mmsc_proxy: "172.18.85.34"
+    mmsc_proxy_port: "80"
+  }
+  apn {
+    name: "IMS"
+    value: "ims"
+    type: IMS
+    bearer_bitmask: "14|20"
+    protocol: IPV4V6
+    roaming_protocol: IPV4V6
+    user_visible: false
+  }
+}
+configs {
+  config {
+    key: "carrier_volte_available_bool"
+    bool_value: true
+  }
+}
+8 {
+  1: 1695248271
+}

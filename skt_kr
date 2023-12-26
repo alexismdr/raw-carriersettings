@@ -1,0 +1,123 @@
+canonical_name: "skt_kr"
+version: 52000000004
+apns {
+  apn {
+    name: "SKT IMS"
+    value: "ims"
+    type: IMS
+    bearer_bitmask: "14|18|20"
+    protocol: IPV4V6
+    roaming_protocol: IPV4V6
+    user_visible: false
+    27: "1|2|3|8|9|10|13|14|15|18|20"
+  }
+  apn {
+    name: "SKT LTE INTERNET"
+    value: "lte.sktelecom.com"
+    type: CBS
+    type: DEFAULT
+    type: MMS
+    type: SUPL
+    type: FOTA
+    server: "*"
+    mmsc: "http://omms.nate.com:9082/oma_mms"
+    mmsc_proxy: "smart.nate.com"
+    mmsc_proxy_port: "9093"
+    protocol: IPV4V6
+  }
+  apn {
+    name: "SKT IA"
+    value: ""
+    type: IA
+    protocol: IPV4V6
+  }
+}
+configs {
+  config {
+    key: "allow_emergency_numbers_in_call_log_bool"
+    bool_value: true
+  }
+  config {
+    key: "bandwidth_string_array"
+    text_array {
+      item: "GPRS:24,24"
+      item: "EDGE:70,18"
+      item: "UMTS:115,115"
+      item: "CDMA-IS95A:14,14"
+      item: "CDMA-IS95B:14,14"
+      item: "1xRTT:30,30"
+      item: "EvDo-rev.0:750,48"
+      item: "EvDo-rev.A:950,550"
+      item: "HSDPA:4300,620"
+      item: "HSUPA:4300,1800"
+      item: "HSPA:4300,1800"
+      item: "EvDo-rev.B:1500,550"
+      item: "eHRPD:750,48"
+      item: "HSPAP:13000,3400"
+      item: "TD-SCDMA:115,115"
+      item: "LTE:30000,15000"
+      item: "NR_NSA:563200,61440"
+      item: "NR_NSA_MMWAVE:563200,614400"
+      item: "NR_SA:563200,61440"
+    }
+  }
+  config {
+    key: "carrier_certificate_string_array"
+    text_array {
+      item: "AD27B68A191CE2D91204BADB438550F4620054C15EBFA13C10B492CD998FDC40"
+    }
+  }
+  config {
+    key: "carrier_instant_lettering_available_bool"
+    bool_value: false
+  }
+  config {
+    key: "carrier_instant_lettering_encoding_string"
+    text_value: "EUC-KR"
+  }
+  config {
+    key: "carrier_instant_lettering_escaped_chars_string"
+    text_value: "\"\\"
+  }
+  config {
+    key: "carrier_instant_lettering_invalid_chars_string"
+    text_value: "[\\n]"
+  }
+  config {
+    key: "carrier_instant_lettering_length_limit_int"
+    int_value: 16
+  }
+  config {
+    key: "carrier_nr_availabilities_int_array"
+    int_array {
+      item: 1
+    }
+  }
+  config {
+    key: "enableSMSDeliveryReports"
+    bool_value: false
+  }
+  config {
+    key: "ims.ims_user_agent_string"
+    text_value: "TTA-VoLTE/1.0 #MANUFACTURE#-#MODEL#/#BUILD# Device_Type/Android_Phone SKT"
+  }
+  config {
+    key: "maxImageHeight"
+    int_value: 1944
+  }
+  config {
+    key: "maxImageWidth"
+    int_value: 2592
+  }
+  config {
+    key: "maxMessageSize"
+    int_value: 1048576
+  }
+  config {
+    key: "support_conference_call_bool"
+    bool_value: true
+  }
+}
+8 {
+  1: 1698371893
+}

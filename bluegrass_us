@@ -1,5 +1,5 @@
 canonical_name: "bluegrass_us"
-version: 30000000094
+version: 52000000009
 apns {
   apn {
     name: "Bluegrass"
@@ -102,6 +102,10 @@ configs {
     }
   }
   config {
+    key: "additional_settings_caller_id_visibility_bool"
+    bool_value: false
+  }
+  config {
     key: "aliasEnabled"
     bool_value: true
   }
@@ -154,25 +158,6 @@ configs {
     bool_value: false
   }
   config {
-    key: "carrier_data_call_permanent_failure_strings"
-    text_array {
-      item: "OPERATOR_BARRED"
-      item: "MISSING_UNKNOWN_APN"
-      item: "UNKNOWN_PDP_ADDRESS_TYPE"
-      item: "USER_AUTHENTICATION"
-      item: "SERVICE_OPTION_NOT_SUPPORTED"
-      item: "SERVICE_OPTION_NOT_SUBSCRIBED"
-      item: "NSAPI_IN_USE"
-      item: "ONLY_IPV4_ALLOWED"
-      item: "ONLY_IPV6_ALLOWED"
-      item: "RADIO_POWER_OFF"
-      item: "TETHERED_CALL_ACTIVE"
-      item: "RADIO_NOT_AVAILABLE"
-      item: "UNACCEPTABLE_NETWORK_PARAMETER"
-      item: "SIGNAL_LOST"
-    }
-  }
-  config {
     key: "carrier_data_call_retry_network_requested_max_count_int"
     int_value: 20
   }
@@ -190,7 +175,7 @@ configs {
   }
   config {
     key: "carrier_eri_file_name_string"
-    text_value: "eri_311480.xml"
+    text_value: "eri.xml"
   }
   config {
     key: "carrier_metered_apn_types_strings"
@@ -217,6 +202,12 @@ configs {
   config {
     key: "carrier_name_string"
     text_value: "Bluegrass Cellular"
+  }
+  config {
+    key: "carrier_nr_availabilities_int_array"
+    int_array {
+      item: 1
+    }
   }
   config {
     key: "carrier_provisioning_app_string"
@@ -248,31 +239,21 @@ configs {
   }
   config {
     key: "cdma_3waycall_flash_delay_int"
-    int_value: 300
+    int_value: 0
   }
   config {
     key: "cdma_enhanced_roaming_indicator_for_home_network_int_array"
     int_array {
-      item: 64
-      item: 65
-      item: 66
-      item: 76
-      item: 77
-      item: 78
-      item: 79
-      item: 80
-      item: 81
-      item: 82
-      item: 83
+      item: 1
     }
   }
   config {
     key: "cdma_home_registered_plmn_name_override_bool"
-    bool_value: true
+    bool_value: false
   }
   config {
     key: "cdma_home_registered_plmn_name_string"
-    text_value: "Bluegrass Cellular"
+    text_value: ""
   }
   config {
     key: "cdma_nonroaming_networks_string_array"
@@ -629,7 +610,7 @@ configs {
   }
   config {
     key: "disable_cdma_activation_code_bool"
-    bool_value: true
+    bool_value: false
   }
   config {
     key: "disable_severe_when_extreme_disabled_bool"
@@ -673,16 +654,12 @@ configs {
       item: "com.customermobile.preload.vzw"
       item: "com.verizon.llkagent"
       item: "com.verizon.mips.services"
-      item: "com.verizon.obdm"
-      item: "com.verizon.obdm_permissions"
       item: "com.verizon.services"
       item: "com.vzw.apnlib"
       item: "com.android.omadm.service"
       item: "com.android.sdm.plugins.connmo"
       item: "com.android.sdm.plugins.dcmo"
       item: "com.android.sdm.plugins.diagmon"
-      item: "com.android.vzwomatrigger"
-      item: "com.htc.omadm.trigger"
       item: "com.google.omadm.trigger"
     }
   }
@@ -707,7 +684,7 @@ configs {
   }
   config {
     key: "force_imei_bool"
-    bool_value: true
+    bool_value: false
   }
   config {
     key: "gps.lpp_profile"
@@ -729,6 +706,10 @@ configs {
     }
   }
   config {
+    key: "hide_enhanced_4g_lte_bool"
+    bool_value: true
+  }
+  config {
     key: "httpParams"
     text_value: "X-MDN: ##LINE1##"
   }
@@ -737,12 +718,91 @@ configs {
     bool_value: true
   }
   config {
+    key: "ims.geolocation_pidf_in_sip_invite_support_int_array"
+    int_array {
+      item: 3
+      item: 1
+    }
+  }
+  config {
+    key: "ims.geolocation_pidf_in_sip_register_support_int_array"
+    int_array {
+      item: 3
+      item: 1
+    }
+  }
+  config {
+    key: "ims.ims_pdn_enabled_in_no_vops_support_int_array"
+    int_array {
+      item: 1
+    }
+  }
+  config {
+    key: "ims.ims_user_agent_string"
+    text_value: "#MANUFACTURE#---#MODEL#---#BUILD#"
+  }
+  config {
+    key: "ims.ipv4_sip_mtu_size_cellular_int"
+    int_value: 1428
+  }
+  config {
+    key: "ims.ipv6_sip_mtu_size_cellular_int"
+    int_value: 1428
+  }
+  config {
+    key: "ims.mmtel_requires_provisioning_bundle"
+    bundle {
+      config {
+        key: "ims.capability_type_video_int_array"
+        int_array {
+          item: 0
+        }
+      }
+      config {
+        key: "ims.capability_type_voice_int_array"
+        int_array {
+          item: 0
+          item: 1
+        }
+      }
+    }
+  }
+  config {
+    key: "ims.phone_context_domain_name_string"
+    text_value: "vzims.com"
+  }
+  config {
+    key: "ims.sip_over_ipsec_enabled_bool"
+    bool_value: false
+  }
+  config {
+    key: "ims.sip_timer_b_millis_int"
+    int_value: 192000
+  }
+  config {
+    key: "ims.sip_timer_f_millis_int"
+    int_value: 30000
+  }
+  config {
+    key: "ims.sip_timer_h_millis_int"
+    int_value: 192000
+  }
+  config {
+    key: "ims.sip_timer_j_millis_int"
+    int_value: 192000
+  }
+  config {
+    key: "ims.sip_timer_t1_millis_int"
+    int_value: 3000
+  }
+  config {
     key: "ims_reasoninfo_mapping_string_array"
     text_array {
       item: "332|simultaneous call limit has already been reached|1403"
       item: "332|Forbidden: Simultaneous Call Limit Has Already Been Reached|1403"
       item: "338|another device sent all devices busy response|1404"
       item: "501|call completion elsewhere|1014"
+      item: "510|Call Completion Elsewhere|1014"
       item: "501|call has been pulled by another device|1016"
       item: "510|call has been pulled by another device|1016"
       item: "501|another device sent all devices busy response|1404"
@@ -750,6 +810,284 @@ configs {
       item: "1014|call has been pulled by another device|1016"
       item: "*|Call is dropped due to Wi-Fi signal is degraded|1407"
     }
+  }
+  config {
+    key: "imsemergency.emergency_qos_precondition_supported_bool"
+    bool_value: false
+  }
+  config {
+    key: "imsemergency.refresh_geolocation_timeout_millis_int"
+    int_value: 2000
+  }
+  config {
+    key: "imsrtt.text_on_default_bearer_supported_bool"
+    bool_value: true
+  }
+  config {
+    key: "imsrtt.text_qos_precondition_supported_bool"
+    bool_value: false
+  }
+  config {
+    key: "imsrtt.text_rr_bandwidth_bps_int"
+    int_value: 300
+  }
+  config {
+    key: "imsrtt.text_rs_bandwidth_bps_int"
+    int_value: 100
+  }
+  config {
+    key: "imsss.network_initiated_ussd_over_ims_supported_bool"
+    bool_value: false
+  }
+  config {
+    key: "imsss.xcap_over_ut_supported_rats_int_array"
+    int_array {
+    }
+  }
+  config {
+    key: "imsvoice.amrnb_payload_description_bundle"
+    bundle {
+      config {
+        key: "102"
+        bundle {
+          config {
+            key: "imsvoice.amr_codec_attribute_modeset_int_array"
+            int_array {
+              item: 7
+            }
+          }
+        }
+      }
+      config {
+        key: "106"
+        bundle {
+          config {
+            key: "imsvoice.amr_codec_attribute_payload_format_int"
+            int_value: 0
+          }
+        }
+      }
+      config {
+        key: "108"
+        bundle {
+          config {
+            key: "imsvoice.amr_codec_attribute_modeset_int_array"
+            int_array {
+              item: 7
+            }
+          }
+          config {
+            key: "imsvoice.amr_codec_attribute_payload_format_int"
+            int_value: 1
+          }
+        }
+      }
+    }
+  }
+  config {
+    key: "imsvoice.amrwb_payload_description_bundle"
+    bundle {
+      config {
+        key: "104"
+        bundle {
+          config {
+            key: "imsvoice.amr_codec_attribute_modeset_int_array"
+            int_array {
+              item: 2
+            }
+          }
+        }
+      }
+      config {
+        key: "110"
+        bundle {
+          config {
+            key: "imsvoice.amr_codec_attribute_modeset_int_array"
+            int_array {
+              item: 2
+            }
+          }
+          config {
+            key: "imsvoice.amr_codec_attribute_payload_format_int"
+            int_value: 1
+          }
+        }
+      }
+    }
+  }
+  config {
+    key: "imsvoice.audio_as_bandwidth_kbps_int"
+    int_value: 38
+  }
+  config {
+    key: "imsvoice.audio_codec_capability_payload_types_bundle"
+    bundle {
+      config {
+        key: "imsvoice.amrnb_payload_type_int_array"
+        int_array {
+          item: 102
+          item: 108
+          item: 106
+        }
+      }
+      config {
+        key: "imsvoice.amrwb_payload_type_int_array"
+        int_array {
+          item: 104
+          item: 110
+        }
+      }
+      config {
+        key: "imsvoice.dtmfnb_payload_type_int_array"
+        int_array {
+          item: 100
+        }
+      }
+      config {
+        key: "imsvoice.dtmfwb_payload_type_int_array"
+        int_array {
+          item: 105
+        }
+      }
+      config {
+        key: "imsvoice.evs_payload_type_int_array"
+        int_array {
+          item: 115
+          item: 109
+        }
+      }
+    }
+  }
+  config {
+    key: "imsvoice.audio_rr_bandwidth_bps_int"
+    int_value: 2400
+  }
+  config {
+    key: "imsvoice.audio_rs_bandwidth_bps_int"
+    int_value: 800
+  }
+  config {
+    key: "imsvoice.conference_factory_uri_string"
+    text_value: "confserver@vzims.com"
+  }
+  config {
+    key: "imsvoice.conference_subscribe_type_int"
+    int_value: 0
+  }
+  config {
+    key: "imsvoice.evs_payload_description_bundle"
+    bundle {
+      config {
+        key: "109"
+        bundle {
+          config {
+            key: "imsvoice.evs_codec_attribute_bandwidth_int"
+            int_value: 2
+          }
+          config {
+            key: "imsvoice.evs_codec_attribute_bitrate_int_array"
+            int_array {
+              item: 4
+              item: 4
+            }
+          }
+          config {
+            key: "imsvoice.evs_codec_attribute_ch_aw_recv_int"
+            int_value: 3
+          }
+        }
+      }
+      config {
+        key: "115"
+        bundle {
+          config {
+            key: "imsvoice.evs_codec_attribute_bitrate_int_array"
+            int_array {
+              item: 0
+              item: 4
+            }
+          }
+          config {
+            key: "imsvoice.evs_codec_attribute_ch_aw_recv_int"
+            int_value: 3
+          }
+        }
+      }
+    }
+  }
+  config {
+    key: "imsvoice.include_caller_id_service_codes_in_sip_invite_bool"
+    bool_value: true
+  }
+  config {
+    key: "imsvoice.minimum_session_expires_timer_sec_int"
+    int_value: 300
+  }
+  config {
+    key: "imsvoice.mo_call_request_timeout_millis_int"
+    int_value: 0
+  }
+  config {
+    key: "imsvoice.multiendpoint_supported_bool"
+    bool_value: true
+  }
+  config {
+    key: "imsvoice.prack_supported_for_18x_bool"
+    bool_value: true
+  }
+  config {
+    key: "imsvoice.ringback_timer_millis_int"
+    int_value: 60000
+  }
+  config {
+    key: "imsvoice.ringing_timer_millis_int"
+    int_value: 55000
+  }
+  config {
+    key: "imsvoice.session_expires_timer_sec_int"
+    int_value: 300
+  }
+  config {
+    key: "imsvoice.session_refresher_type_int"
+    int_value: 0
+  }
+  config {
+    key: "imsvoice.srvcc_type_int_array"
+    int_array {
+      item: 2
+    }
+  }
+  config {
+    key: "imsvoice.voice_on_default_bearer_supported_bool"
+    bool_value: true
+  }
+  config {
+    key: "imsvoice.voice_qos_precondition_supported_bool"
+    bool_value: false
+  }
+  config {
+    key: "imsvt.video_as_bandwidth_kbps_int"
+    int_value: 425
+  }
+  config {
+    key: "imsvt.video_on_default_bearer_supported_bool"
+    bool_value: true
+  }
+  config {
+    key: "imsvt.video_qos_precondition_supported_bool"
+    bool_value: false
+  }
+  config {
+    key: "imsvt.video_rr_bandwidth_bps_int"
+    int_value: 28800
+  }
+  config {
+    key: "imsvt.video_rs_bandwidth_bps_int"
+    int_value: 9600
+  }
+  config {
+    key: "imswfc.emergency_call_over_emergency_pdn_bool"
+    bool_value: true
   }
   config {
     key: "inflate_signal_strength_bool"
@@ -810,7 +1148,7 @@ configs {
   }
   config {
     key: "iwlan.key_error_policy_config_string"
-    text_value: "[{\"ApnName\": \"*\",\"ErrorTypes\":[{\"ErrorType\": \"IKE_PROTOCOL_ERROR_TYPE\",\"ErrorDetails\": [\"24\", \"9000-9050\", \"11000-11050\"],\"RetryArray\": [\"0\", \"0\"],\"UnthrottlingEvents\": []}, {\"ErrorType\": \"IKE_PROTOCOL_ERROR_TYPE\",\"ErrorDetails\": [\"10500-10550\"],\"RetryArray\": [\"3600\", \"-1\"],\"UnthrottlingEvents\": []}, {\"ErrorType\": \"*\",\"ErrorDetails\": [\"*\"],\"RetryArray\": [\"0\", \"0\", \"60+r15\", \"120\", \"480\", \"900\", \"-1\"],\"UnthrottlingEvents\": [\"WIFI_AP_CHANGED_EVENT\"]}]}]"
+    text_value: "[{\"ApnName\": \"*\",\"ErrorTypes\":[{\"ErrorType\": \"IKE_PROTOCOL_ERROR_TYPE\",\"ErrorDetails\": [\"24\", \"9000-9050\", \"11000-11050\"],\"RetryArray\": [\"0\", \"0\"],\"UnthrottlingEvents\": []}, {\"ErrorType\": \"IKE_PROTOCOL_ERROR_TYPE\",\"ErrorDetails\": [\"10500-10550\"],\"RetryArray\": [\"3600\", \"-1\"],\"UnthrottlingEvents\": []}, {\"ErrorType\": \"*\",\"ErrorDetails\": [\"*\"],\"RetryArray\": [\"0\", \"0\", \"60+r15\", \"120\", \"480\", \"900\", \"-1\"],\"UnthrottlingEvents\": [\"WIFI_AP_CHANGED_EVENT\"]}, {\"ErrorType\": \"IKE_PROTOCOL_ERROR_TYPE\",\"ErrorDetails\": [\"36\"],\"RetryArray\": [\"0\", \"0\", \"60+r15\", \"120\", \"480\", \"900\", \"-1\"],\"UnthrottlingEvents\": [\"WIFI_AP_CHANGED_EVENT\"],\"HandoverAttemptCount\": \"3\"}]}]"
   }
   config {
     key: "iwlan.retransmit_timer_sec_int_array"
@@ -819,6 +1157,16 @@ configs {
       item: 2000
       item: 4000
       item: 8000
+    }
+  }
+  config {
+    key: "iwlan_handover_policy_string_array"
+    text_array {
+      item: "source=GERAN|UTRAN|EUTRAN|NGRAN|IWLAN|UNKNOWN, target=GERAN|UTRAN|EUTRAN|NGRAN|IWLAN, roaming=true, type=disallowed, capabilities=IMS|EIMS|MMS|XCAP|CBS"
+      item: "source=IWLAN|UNKNOWN, target=GERAN|UTRAN, type=disallowed, capabilities=IMS|EIMS|MMS|XCAP|CBS"
+      item: "source=GERAN|UTRAN, target=IWLAN, type=disallowed, capabilities=IMS|EIMS|MMS|XCAP|CBS"
+      item: "source=EUTRAN|NGRAN|IWLAN|UNKNOWN, target=EUTRAN|NGRAN|IWLAN, type=disallowed, capabilities=EIMS"
+      item: "source=EUTRAN|NGRAN|IWLAN, target=EUTRAN|NGRAN|IWLAN, type=allowed, capabilities=IMS|MMS|XCAP|CBS"
     }
   }
   config {
@@ -913,6 +1261,186 @@ configs {
     bool_value: false
   }
   config {
+    key: "qns.allow_ims_over_iwlan_cellular_limited_case_bool"
+    bool_value: true
+  }
+  config {
+    key: "qns.allow_video_over_iwlan_with_cellular_limited_case_bool"
+    bool_value: true
+  }
+  config {
+    key: "qns.cbs_rat_preference_int"
+    int_value: 3
+  }
+  config {
+    key: "qns.cbs_transport_type_int"
+    int_value: 2
+  }
+  config {
+    key: "qns.enable_minimum_guarding_timer_after_connected_apn_string_array"
+    text_array {
+      item: "emergency"
+    }
+  }
+  config {
+    key: "qns.ho_guarding_by_preference_bool"
+    bool_value: true
+  }
+  config {
+    key: "qns.idle_eutran_rsrp_int_array"
+    int_array {
+      item: -100
+      item: -112
+      item: -115
+    }
+  }
+  config {
+    key: "qns.idle_eutran_rsrq_int_array"
+    int_array {
+      item: -11
+      item: -15
+      item: -18
+    }
+  }
+  config {
+    key: "qns.idle_ngran_ssrsrp_int_array"
+    int_array {
+      item: -100
+      item: -112
+      item: -115
+    }
+  }
+  config {
+    key: "qns.idle_ngran_ssrsrq_int_array"
+    int_array {
+      item: -11
+      item: -15
+      item: -18
+    }
+  }
+  config {
+    key: "qns.idle_wifi_rssi_int_array"
+    int_array {
+      item: -65
+      item: -80
+    }
+  }
+  config {
+    key: "qns.ims_wlan_hysteresis_timer_ms_int_array"
+    int_array {
+      item: 120000
+      item: 0
+      item: 0
+    }
+  }
+  config {
+    key: "qns.ims_wwan_hysteresis_timer_ms_int_array"
+    int_array {
+      item: 120000
+      item: 0
+      item: 0
+    }
+  }
+  config {
+    key: "qns.in_call_rovein_allowed_and_fallback_reason_int_array"
+    int_array {
+      item: 3
+      item: 0
+    }
+  }
+  config {
+    key: "qns.non_ims_wlan_hysteresis_timer_ms_int_array"
+    int_array {
+      item: 120000
+      item: 0
+    }
+  }
+  config {
+    key: "qns.roam_transport_type_selection_without_signal_strength_bool"
+    bool_value: true
+  }
+  config {
+    key: "qns.sos_transport_type_int"
+    int_value: 2
+  }
+  config {
+    key: "qns.support_service_barring_check_bool"
+    bool_value: true
+  }
+  config {
+    key: "qns.support_sos_apn_over_wifi_with_entitlement_only_bool"
+    bool_value: true
+  }
+  config {
+    key: "qns.video_eutran_rsrp_int_array"
+    int_array {
+      item: 65535
+      item: 65535
+      item: -115
+    }
+  }
+  config {
+    key: "qns.video_ngran_ssrsrp_int_array"
+    int_array {
+      item: 65535
+      item: 65535
+      item: -115
+    }
+  }
+  config {
+    key: "qns.video_wifi_rssi_int_array"
+    int_array {
+      item: -65
+      item: -75
+    }
+  }
+  config {
+    key: "qns.voice_eutran_rsrp_int_array"
+    int_array {
+      item: -100
+      item: -112
+      item: -115
+    }
+  }
+  config {
+    key: "qns.voice_eutran_rsrq_int_array"
+    int_array {
+      item: -11
+      item: -15
+      item: -18
+    }
+  }
+  config {
+    key: "qns.voice_ngran_ssrsrp_int_array"
+    int_array {
+      item: -100
+      item: -112
+      item: -115
+    }
+  }
+  config {
+    key: "qns.voice_ngran_ssrsrq_int_array"
+    int_array {
+      item: -11
+      item: -15
+      item: -18
+    }
+  }
+  config {
+    key: "qns.voice_wifi_rssi_int_array"
+    int_array {
+      item: -65
+      item: -80
+    }
+  }
+  config {
+    key: "qns.waiting_time_for_preferred_transport_when_power_on_int_array"
+    int_array {
+      item: 45000
+      item: 0
+    }
+  }
+  config {
     key: "read_only_apn_fields_string_array"
     text_array {
       item: "name"
@@ -956,7 +1484,7 @@ configs {
   }
   config {
     key: "show_apn_setting_cdma_bool"
-    bool_value: true
+    bool_value: false
   }
   config {
     key: "sim_country_iso_override_string"
@@ -969,6 +1497,10 @@ configs {
   config {
     key: "sms_requires_destination_number_conversion_bool"
     bool_value: true
+  }
+  config {
+    key: "spn_display_rule_use_roaming_from_service_state_bool"
+    bool_value: false
   }
   config {
     key: "support_3gpp_call_forwarding_while_roaming_bool"
@@ -984,11 +1516,20 @@ configs {
   }
   config {
     key: "support_swap_after_merge_bool"
-    bool_value: false
+    bool_value: true
   }
   config {
     key: "support_wps_over_ims_bool"
     bool_value: true
+  }
+  config {
+    key: "telephony_data_setup_retry_rules_string_array"
+    text_array {
+      item: "capabilities=eims, retry_interval=1000, maximum_retries=20"
+      item: "permanent_fail_causes=8|27|28|29|32|33|35|50|51|-5|-6|65538|-3, retry_interval=2500"
+      item: "capabilities=mms|supl|cbs, retry_interval=2000"
+      item: "capabilities=internet|enterprise|dun|ims|fota, retry_interval=2500|3000|5000|10000|15000|20000|40000|60000|120000|240000|600000|1200000|1800000, maximum_retries=20"
+    }
   }
   config {
     key: "treat_downgraded_video_calls_as_video_calls_bool"
@@ -996,7 +1537,7 @@ configs {
   }
   config {
     key: "tty_supported_bool"
-    bool_value: true
+    bool_value: false
   }
   config {
     key: "uaProfTagName"
@@ -1032,9 +1573,9 @@ configs {
   }
   config {
     key: "world_mode_enabled_bool"
-    bool_value: true
+    bool_value: false
   }
 }
 8 {
-  1: 1628001617
+  1: 1695248271
 }

@@ -6,11 +6,12 @@
 
 test001_zz
 00101
-
-20201
+
+
+telekom_gr
 20201
-
-20205
+
+vodafone_gr
 20205
 
 20209
@@ -21,8 +22,9 @@ test001_zz
 
 20402
 20402
-
-voiceworks_nl
+
+
+enreach_nl
 20403
 
 20404GID1=2801
@@ -30,13 +32,6 @@ test001_zz
 *
 truphone_zz
 20404"547275554B3030656E
-*
-truphone_zz
-20404"54727555533030656E
-
-
-sasktel_ca
-20404"5A
 '
 
 verizon_us
@@ -44,6 +39,10 @@ verizon_us
  
 truphone_zz
 2040420404794
+ 
+
+enreach_nl
+20404	204047960
 
 	cspire_nl
 20404C Spire
@@ -69,11 +68,9 @@ HOT MOBILE
 *
 truphone_zz
 20408"547275554B3030656E
-*
-truphone_zz
-20408"54727555533030656E
-)
-20408IMSI=204080950
+ 
+
+enreach_nl
 20408	204080950
 ,
 20408SPN=RABO MOBIEL
@@ -89,8 +86,25 @@ Lycamobile
 
 telfort_nl
 20412
-"
-20416SPN=BEN NL
+
+
+tmomvno_nl
+20416"2F
+
+
+tmomvno_nl
+20416"4E4C
+
+
+tmomvno_nl
+20416"5F
+
+
+tmomvno_nl
+20416"8F
+
+
+tmomvno_nl
 20416BEN NL
 
 
@@ -104,9 +118,9 @@ telfort_nl
 
 tmobile_nl
 20420
-
-truphone_zz
-20433
+*
+truphone_zz
+20433"547275554B3030656E
 
 20465GID1=50
 20465"50
@@ -128,12 +142,12 @@ tmobile_nl
 
 20601GID1=B6
 20601"B6
+
+	virgin_ie
+20601	206018016
 %
 20601IMSI=2060188
 206012060188
-
-	iijmio_jp
-20601IIJ
 &
 20601SPN=IUSACELL
 20601IUSACELL
@@ -144,24 +158,25 @@ NRJ MOBILE
 $
 20601SPN=IUSACELL
 20601UNEFON
-
-20601
+
+proximus_be
 20601
-
-20605
+
+
+telenet_be
 20605
 $
 lycamobile_be
 20606
 Lycamobile
-
-20610
+
+	orange_be
 20610
 
 	virgin_gb
 20620"28000000
-
-20620
+
+base_be
 20620
 
 bics_be
@@ -194,9 +209,6 @@ rakuten_jp
 *
 truphone_zz
 20809"547275554B3030656E
-*
-truphone_zz
-20809"54727555533030656E
 
 aliv_bs
 20809	208090021
@@ -209,9 +221,6 @@ rakuten_jp
 
 20810GID1=44
 20810"44
-
-20810GID1=4C
-20810"4C
 
 20810GID1=4E
 20810"4E
@@ -236,6 +245,9 @@ rakuten_jp
 
 sfr_fr
 20810
+*
+truphone_zz
+20812"547275554B3030656E
 
 free_fr
 20815
@@ -264,12 +276,20 @@ Lycamobile
 
 coriolis_fr
 20827
+
+syma_fr
+20830208300
+
+orange5gdemo_fr
+20832
+
+orange5gdemo_fr
+20885
 
 bouygues_fr
 20888
-
-
-andorra_ad
+
+andorratelecom_ad
 21303
 
 vodafone_es
@@ -292,9 +312,6 @@ mobiler_es
  
 carrefour_es
 214032140352
-
-simyo_es
-214032140358
 %
 21403IMSI=2140359
 214032140359
@@ -302,11 +319,20 @@ mobiler_es
 
 jazztel_es
 21403JAZZTEL
+
+simyo_es
+21403simyo
 
 	orange_es
 21403
-
-21404
+"
+euskaltel_es
+21404	EUSKALTEL
+"
+pepephone_es
+21404	Pepephone
+
+yoigo_es
 21404
 
 inet_es
@@ -320,9 +346,6 @@ jazztel_es
 
 21406GID1=0008
 21406"0008
-%
-21406IMSI=2140606
-214062140606
 
 
 mobiler_es
@@ -330,9 +353,15 @@ mobiler_es
  
 telecable_es
 214062140613
+
+low_es
+21406Lowi
 (
 21406SPN=PEPEPHONE
 21406	PEPEPHONE
+
+fi_es
+21406	finetwork
 
 21406
 21406
@@ -363,31 +392,38 @@ mobiler_es
 
 jazztel_es
 21421JAZZTEL
+
+digimobil_es
+21422
 $
 lycamobile_es
 21425
 Lycamobile
-
-truphone_zz
-21427
+*
+truphone_zz
+21427"547275554B3030656E
 
 inet_es
 21434
 "
 21601SPN=DJUICE
 21601DJUICE
-
-21601
+
+	yettel_hu
 21601
-
-21630
+
+digi_hu
+21603
+
+
+telekom_hu
 21630
 *
 21670IMSI=21670XX1XXX
 2167021670xx1
-*
-21670IMSI=21670XX2XXX
-2167021670xx2
+
+vodafone_hu
+21670
 
 21671
 21671
@@ -400,18 +436,87 @@ Lycamobile
 
 21890
 21890
+
+
+telekom_hr
+21901"01
+
+
+telekom_hr
+21901"02
+
+
+telekom_hr
+21901"03
+
+
+telekom_hr
+21901"99
+
+
+telekom_hr
+21901"FF
 "
 21901SPN=BONBON
 21901BONBON
-
-21901
-21901
+
+
+telekom_hr
+21901HT HR
+ 
+
+telekom_hr
+21901	HT-Campus
+"
+
+telekom_hr
+21901R&D Network
+"
+
+telekom_hr
+21901T-Mobile HR
 
 21902
 21902
 
-21910
+a1_hr
 21910
+
+
+telekom_hr
+21920"01
+
+
+telekom_hr
+21920"02
+
+
+telekom_hr
+21920"03
+
+
+telekom_hr
+21920"99
+
+
+telekom_hr
+21920"FF
+
+
+telekom_hr
+21920HT HR
+ 
+
+telekom_hr
+21920	HT-Campus
+"
+
+telekom_hr
+21920R&D Network
+"
+
+telekom_hr
+21920T-Mobile HR
 
 22001
 22001
@@ -427,6 +532,66 @@ Lycamobile
 
 22005
 22005
+*
+coopvoce_it
+22201"434F4F50FFFFFFFFFF
+ 
+tango_us
+2220122201307130
+ 
+tango_us
+2220122201307131
+ 
+tango_us
+2220122201307132
+ 
+tango_us
+2220122201307133
+ 
+tango_us
+2220122201307134
+ 
+tango_us
+2220122201307135
+ 
+tango_us
+2220122201307136
+ 
+tango_us
+2220122201307137
+ 
+tango_us
+2220122201307138
+!
+tango_us
+22201222013071390
+!
+tango_us
+22201222013071391
+!
+tango_us
+22201222013071392
+!
+tango_us
+22201222013071393
+!
+tango_us
+22201222013071394
+ 
+tango_us
+2220122201309670
+ 
+tango_us
+2220122201344000
+ 
+tango_us
+2220122201344001
+ 
+tango_us
+2220122201344002
+ 
+coopvoce_it
+22201CoopVoce
 
 	gigsky_us
 22201GigSky
@@ -442,8 +607,9 @@ $
 
 kena_it
 22207
-
-22208
+
+
+fastweb_it
 22208
 
 22210SPN=ERG
@@ -464,6 +630,12 @@ Lycamobile
 
 iliad_it
 22250"F003
+
+coopvoce_it
+22253
+
+spusu_it
+22256
 "
 verymobile_it
 22288"00000099
@@ -474,32 +646,38 @@ windtre_it
 "
 verymobile_it
 22299"00000099
-$
-22299SPN=FASTWEB
+
+
+fastweb_it
 22299FASTWEB
 
 
 windtre_it
 22299
-
-22601
+
+vodafone_ro
 22601
-
-22603
+
+
+telekom_ro
 22603
-
-22605
+
+digi_ro
 22605
 
 22606
 22606
-
-22610
+
+	orange_ro
 22610
 $
 lycamobile_ro
 22616
 Lycamobile
+
+
+fastweb_it
+22801FASTWEB
 
 swisscom_ch
 22801
@@ -507,8 +685,8 @@ Lycamobile
 
 sunrise_ch
 22802
-
-22803
+
+salt_ch
 22803
 
 lycamobile_ch
@@ -518,19 +696,20 @@ sunrise_ch
 tmobile_cz
 23001
 
-23002
+o2_cz
 23002
 
 vodafone_cz
 23003
-
-23101
+
+	orange_sk
 23101
-
-23102
+
+
+telekom_sk
 23102
 
-23106
+o2_sk
 23106
 
 a1_at
@@ -538,6 +717,9 @@ tmobile_cz
 
 a1_at
 23202
+
+goodspeed_zz
+23203"C5
 
 
 tmobile_at
@@ -558,8 +740,14 @@ $
 23208
 Lycamobile
 
-fi_us
+fi_at
 23210"0306
+
+	u264ao_at
+23210"040D
+
+	u264ap_at
+23210"040E
 
 h3_at
 23210
@@ -587,9 +775,12 @@ $
 
 tesco_gb
 23410"0A
-
-giffgaff_gb
-23410"508
+
+giffgaff_gb
+23410"50
+*
+truphone_zz
+23410"547275554B3030656E
 
 o2prepaid_gb
 23410"61
@@ -621,14 +812,14 @@ $
 
 23415GID1=70
 23415"70
-
-23415GID1=A0
+
+asda_gb
 23415"A0
 
 23415GID1=B3
 23415"B3
-
-23415GID1=C1
+
+talkmobile_gb
 23415"C1
 "
 23415SPN=LEBARA
@@ -657,9 +848,9 @@ $
 
 h3_gb
 23420
-
-truphone_zz
-23425
+*
+truphone_zz
+23425"547275554B3030656E
 *
 23426SPN=LYCAMOBILE
 23426
@@ -697,7 +888,7 @@ LYCAMOBILE
 
 dent_zz
 23450"
-3597bfd533
+3597BFD533
 !
 truphone_zz
 23450	234500008
@@ -776,15 +967,24 @@ LYCAMOBILE
 
 23450
 23450
+
+tango_us
+23453
 
 23455
 23455
 
 sky_gb
 23457
-
-23458
-23458
+"
+manxcontract_im
+23458234583
+$
+manxcontract_im
+2345823458850
+#
+manxprepaid_im
+2345823458851
 
 esn_gb
 23471
@@ -806,12 +1006,9 @@ LYCAMOBILE
 
 	gigsky_us
 23801"6F
-
-tdc_dk
-238012380101
-$
-23801SPN=TELMORE
-23801TELMORE
+
+tdc_dk
+23801
 
 
 telenor_dk
@@ -826,18 +1023,9 @@ $
 lycamobile_dk
 23812
 Lycamobile
-
-telia_dk
-238202382010
-
-telia_dk
-238202382030
-$
-23820SPN=CALL ME
-23820CALL ME
-&
-23820SPN=DLG TELE
-23820DLG TELE
+
+telia_dk
+23820
 
 telia_dk
 23830
@@ -871,9 +1059,8 @@ $
  
 24005SPN=TELIA
 24005TELIA
-
-
-telenor_se
+
+vimla_se
 24006
 
 sky_gb
@@ -919,7 +1106,10 @@ TELENOR SE
 24024
 24024
 
-google_5g_lab_tw
+goodspeed_zz
+24042"C5
+
+google5glab_tw
 24099
 .
 24201IMSI=24201700XXXXXXX
@@ -928,9 +1118,6 @@ TELENOR SE
 
 telenor_no
 24201
--
-24202IMSI=2420256XXXXXXXX
-242022420256
 
 telia_no
 24202
@@ -944,6 +1131,12 @@ onecall_no
 
 com4_no
 24209
+
+ice_no
+24214
+
+erate_no
+24215"0E
 $
 lycamobile_no
 24223
@@ -972,26 +1165,26 @@ Lycamobile
 
 	elisa1_fi
 24421
-
-24491
+
+telia_fi
 24491
-
-24601
+
+telia_lt
 24601
-
-24602
+
+bite_lt
 24602
-
-24603
+
+tele2_lt
 24603
-
-24701
+
+lmt_lv
 24701
-
-24702
+
+tele2_lv
 24702
-
-24705
+
+bite_lv
 24705
 
 send_ee
@@ -999,17 +1192,14 @@ Lycamobile
 
 send_ee
 24801248010x3
-
-24801
+
+telia_ee
 24801
-
-24802
+
+elisa_ee
 24802
- 
-24803SPN=TELE2
-24803TELE2
-
-24803
+
+tele2_ee
 24803
 
 25001
@@ -1069,36 +1259,41 @@ tinkoff_ru
 
 25905
 25905
-
-26001
+
+plus_pl
 26001
-
-26002
+
+
+telekom_pl
 26002
-
-26003
+
+dent_zz
+26003"
+3597BFD533
+
+	orange_pl
 26003
 
 dent_zz
 26006"
-3597bfd533
-
-26006
+3597BFD533
+
+play_pl
 26006
 $
 lycamobile_pl
 26009
 Lycamobile
-
-truphone_zz
-26033
+*
+truphone_zz
+26033"547275554B3030656E
 
 26044
 26044
 
 dent_zz
 26098"
-3597bfd533
+3597BFD533
 
 congstar_de
 26201"44
@@ -1128,15 +1323,9 @@ telekom_de
  
 o2prepaid_de
 262072620749
-'
-26207IMSI=26207500
+
+	tchibo_de
 2620726207500
-'
-26207IMSI=26207515
-2620726207515
-'
-26207IMSI=26207520
-2620726207520
  
 26207SPN=ALICE
 26207ALICE
@@ -1149,34 +1338,55 @@ telekom_de
 
 vodafonelab_de
 26209
+
+26214_de
+26214Lebara
 
 mvno_de
 26220
-
-truphone_zz
-26242
+
+1and1_de
+26223
+*
+truphone_zz
+26242"547275554B3030656E
 $
 lycamobile_de
 26243
 Lycamobile
-
-google_5g_lab_us
+
+google5glab_us
+262830
+
+google5glab_us
 262840
-
-26801
+
+	gibtel_gi
+26601
+
+vodafone_pt
 26801
-
-26803
+
+nos_pt
 26803
 $
 lycamobile_pt
 26804
 Lycamobile
-
-26806
+
+meo_pt
 26806
-
-27001
+
+nos_pt
+26897
+
+nos_pt
+26898
+
+nos_pt
+26899
+
+post_lu
 27001
 
 mtx_lu
@@ -1184,17 +1394,17 @@ Lycamobile
 
 27077
 27077
-
-27099
+
+	orange_lu
 27099
 
 vodafone_ie
 27201
-
-27202
+
+h3g27202_ie
 27202
-
-27203
+
+eir_ie
 27203
 
 h3_ie
@@ -1208,6 +1418,12 @@ Lycamobile
 
 lycamobile_ie
 27213
+
+	virgin_ie
+27215"75696531
+
+	virgin_ie
+27215"75696532
 
 	siminn_is
 27401
@@ -1220,6 +1436,10 @@ Lycamobile
 
 27411
 27411
+
+
+telekom_al
+27601
 
 27602
 27602
@@ -1232,6 +1452,13 @@ Lycamobile
 
 28010
 28010
+
+primetel_cy
+28020
+
+
+beeline_am
+28301
 
 28310
 28310
@@ -1263,10 +1490,11 @@ Lycamobile
 29001
 29001
 
-29340
+a1_si
 29340
-
-29341
+
+
+telekom_si
 29341
 
 29364
@@ -1274,8 +1502,8 @@ Lycamobile
 .
 29370IMSI=29370029XXXXXXX
 2937029370029
-
-29370
+
+telemach_si
 29370
 
 29401
@@ -1293,6 +1521,9 @@ Lycamobile
 
 swisscom_li
 29501
+
+fl1_li
+29505
 
 29701
 29701
@@ -1329,8 +1560,8 @@ Lycamobile
 
 302221
 302221
-
-302270
+
+eastlink_ca
 302270
 
 302290
@@ -1395,6 +1626,10 @@ Lycamobile
 
 302660
 302660
+
+
+sasktel_ca
+302681
 
 rogers5g_ca
 302720"A4
@@ -1402,15 +1637,15 @@ Lycamobile
 
 tbaytel_ca
 302720"BA
+
+cityfone_ca
+302720"CC
 
 chatr_ca
 302720"D2
 
 ztar_ca
 302720"D4
-
-cityfone_ca
-302720"cc
 
 chatr_ca
 302720	302720x84
@@ -1423,10 +1658,26 @@ tbaytel_ca
 
 	rogers_ca
 302720
+
+rogerswpn_ca
+302721
+
+u264a_ca
+302760"F1
+
+
+sasktel_ca
+302780"5A
 
 
 sasktel_ca
-302780
+302781
+
+spmtelecom_pm
+30801
+
+spmtelecom_pm
+30803
 (
 310000SPN=BLUEWIRE
 310000BLUEWIRE
@@ -1543,8 +1794,8 @@ Fi Network
 
 sprintwholesale_us
 310120
-
-310130
+
+carolinawest_us
 310130
 
 cricket5g_us
@@ -1612,12 +1863,42 @@ tmobile_us
 
 assurance_us
 310240"1A53
+
+ultra_us
+310240"354D
+
+ultra_us
+310240"364D
+
+ultra_us
+310240"4153
+
+ultra_us
+310240"4155
+
+fi_us
+310240"4276
+
+u264a_us
+310240"4280
+
+ultra_us
+310240"6132
 
 boosttmo_us
 310240"6230
+
+ultra_us
+310240"6903
 
 metropcs_us
 310240"6D38
+
+ultra_us
+310240"756D
+
+ultra_us
+310240"7601
 
 
 tmobile_us
@@ -1641,13 +1922,24 @@ tmobile_us
 (
 consumercellulartmo_us
 310260"2AC9
-
-
-tmomvno_us
+
+ultra_us
+310260"354D
+
+ultra_us
+310260"364D
+
+ultra_us
 310260"4153
+
+ultra_us
+310260"4155
 !
 redpockettmo_us
 310260"4201
+
+fi_us
+310260"4276
 
 
 tmomvno_us
@@ -1663,9 +1955,8 @@ tmomvno_us
 
 	simple_us
 310260"534D
-
-
-tmomvno_us
+
+ultra_us
 310260"6132
 
 
@@ -1675,6 +1966,9 @@ tmomvno_us
 
 tmomvno_us
 310260"6135
+
+ultra_us
+310260"6903
 
 
 tmomvno_us
@@ -1701,10 +1995,12 @@ tmomvno_us
 
 tmomvno_us
 310260"7531
-
-
-tmomvno_us
+
+ultra_us
 310260"756D
+
+ultra_us
+310260"7601
 
 
 tmomvno_us
@@ -1732,9 +2028,42 @@ tmobile_us
 
 tmobile_us
 310270
+#
+reachmobileatt_us
+310280"20FF
+#
+reachmobileatt_us
+310280"21FF
+#
+reachmobileatt_us
+310280"22FF
+#
+reachmobileatt_us
+310280"23FF
+#
+reachmobileatt_us
+310280"24FF
+#
+reachmobileatt_us
+310280"25FF
+#
+reachmobileatt_us
+310280"26FF
+#
+reachmobileatt_us
+310280"27FF
+#
+reachmobileatt_us
+310280"28FF
+#
+reachmobileatt_us
+310280"29FF
 (
 consumercellularatt_us
 310280"2AC9
+#
+reachmobileatt_us
+310280"30FF
 
 attmvnos_us
 310280"4102
@@ -1772,9 +2101,9 @@ att5gsa_us
 
 att_us
 310280
-
-truphone_zz
-31030
++
+truphone_zz
+310300"547275554B3030656E
 
 metropcs_us
 310300"6D38
@@ -1789,8 +2118,8 @@ tmobile_us
 
 tmobile_us
 310310
-
-310320
+
+celluarone_us
 310320
 &
 310330SPN=ALLTEL2
@@ -1816,9 +2145,79 @@ tmobile_us
 
 310390
 310390
+#
+reachmobileatt_us
+310410"21FF
+#
+reachmobileatt_us
+310410"22FF
+#
+reachmobileatt_us
+310410"23FF
+#
+reachmobileatt_us
+310410"24FF
+#
+reachmobileatt_us
+310410"25FF
+#
+reachmobileatt_us
+310410"26FF
+#
+reachmobileatt_us
+310410"27FF
+#
+reachmobileatt_us
+310410"28FF
+#
+reachmobileatt_us
+310410"29FF
 (
 consumercellularatt_us
 310410"2AC9
+#
+reachmobileatt_us
+310410"30FF
+
+
+dishatt_us
+310410"3430
+
+
+dishatt_us
+310410"3432
+
+
+dishatt_us
+310410"3434
+
+
+dishatt_us
+310410"3436
+
+
+dishatt_us
+310410"3438
+
+
+dishatt_us
+310410"3440
+
+
+dishatt_us
+310410"3442
+
+
+dishatt_us
+310410"3444
+
+
+dishatt_us
+310410"3446
+
+
+dishatt_us
+310410"3448
 
 attmvnos_us
 310410"4102
@@ -1865,8 +2264,8 @@ att5gsa_us
 
 310430SPN=GCI
 310430GCI
-
-310450
+
+	viaero_us
 310450
 $
 310470SPN=NTELOS
@@ -1903,13 +2302,26 @@ tmobile_us
 
 	inland_us
 310580
-
-metropcs_us
-310590"6D38
+(
+
+xfinity_us
+310590"BA01450000000000
 
 
-tmobile_us
+verizon_us
 310590
+(
+
+xfinity_us
+310591"BA01450000000000
+(
+
+xfinity_us
+310599"BA01450000000000
+
+
+verizon_us
+310599
 
 
 cellcom_us
@@ -1934,12 +2346,9 @@ tmobile_us
 
 tmobile_us
 310660
-*
-truphone_zz
-31069"547275554B3030656E
-*
-truphone_zz
-31069"54727555533030656E
++
+truphone_zz
+310690"547275554B3030656E
 .
 310750SPN=APPALACHIAN
 310750APPALACHIAN
@@ -1986,6 +2395,51 @@ tmobile_us
 0
 310930SPN=COPPERVALLEY
 310930COPPERVALLEY
+#
+reachmobileatt_us
+310950"20FF
+#
+reachmobileatt_us
+310950"21FF
+#
+reachmobileatt_us
+310950"22FF
+#
+reachmobileatt_us
+310950"23FF
+#
+reachmobileatt_us
+310950"24FF
+#
+reachmobileatt_us
+310950"25FF
+#
+reachmobileatt_us
+310950"26FF
+#
+reachmobileatt_us
+310950"27FF
+#
+reachmobileatt_us
+310950"28FF
+#
+reachmobileatt_us
+310950"29FF
+(
+consumercellularatt_us
+310950"2AC9
+#
+reachmobileatt_us
+310950"30FF
+
+attmvnos_us
+310950"4102
+!
+redpocketatt_us
+310950"4201
+
+attmvnos_us
+310950"44FF
 
 
 att5gsa_us
@@ -1993,6 +2447,18 @@ att5gsa_us
 
 att5g_us
 310950"53FF
+
+attmvnos_us
+310950"62FF
+
+attmvnos_us
+310950"69FF
+ 
+tracfoneatt_us
+310950"DDFF
+ 
+tracfoneatt_us
+310950"DEFF
 
 att_us
 310950
@@ -2019,6 +2485,9 @@ $
 
 310980
 310980
+
+	evolve_us
+310990
 
 311012
 311012
@@ -2040,6 +2509,88 @@ $
 (
 311140SPN=SPROCKET
 311140SPROCKET
+#
+reachmobileatt_us
+311180"21FF
+#
+reachmobileatt_us
+311180"22FF
+#
+reachmobileatt_us
+311180"23FF
+#
+reachmobileatt_us
+311180"24FF
+#
+reachmobileatt_us
+311180"25FF
+#
+reachmobileatt_us
+311180"26FF
+#
+reachmobileatt_us
+311180"27FF
+#
+reachmobileatt_us
+311180"28FF
+#
+reachmobileatt_us
+311180"29FF
+(
+consumercellularatt_us
+311180"2AC9
+#
+reachmobileatt_us
+311180"30FF
+
+
+dishatt_us
+311180"3430
+
+
+dishatt_us
+311180"3432
+
+
+dishatt_us
+311180"3434
+
+
+dishatt_us
+311180"3436
+
+
+dishatt_us
+311180"3438
+
+
+dishatt_us
+311180"3440
+
+
+dishatt_us
+311180"3442
+
+
+dishatt_us
+311180"3444
+
+
+dishatt_us
+311180"3446
+
+
+dishatt_us
+311180"3448
+
+attmvnos_us
+311180"4102
+!
+redpocketatt_us
+311180"4201
+
+attmvnos_us
+311180"44FF
 
 
 att5gsa_us
@@ -2047,6 +2598,18 @@ att5gsa_us
 
 att5g_us
 311180"53FF
+
+attmvnos_us
+311180"62FF
+
+attmvnos_us
+311180"69FF
+ 
+tracfoneatt_us
+311180"DDFF
+ 
+tracfoneatt_us
+311180"DEFF
 
 att_us
 311180
@@ -2089,6 +2652,14 @@ att5gsa_us
 
 	cspire_us
 311230
+
+
+verizon_us
+311270
+
+
+verizon_us
+311280
 "
 311310SPN=LEACO
 311310LEACO
@@ -2102,7 +2673,7 @@ $
 311350SPN=NEMONT
 311350NEMONT
 
-311370
+gci_us
 311370
 
 311390
@@ -2149,16 +2720,62 @@ xfinity_us
 )
 spectrum_us
 311480"BA01490000000000
+$
+cox_us
+311480"BA01570000000000
 (
 
 visible_us
 311480"BAE1000000000000
+)
+visiblev_us
+311480"BAE2000000000000
 
 
 verizon_us
 311480
-
-	virgin_us
+(
+
+xfinity_us
+311481"BA01450000000000
+(
+
+xfinity_us
+311482"BA01450000000000
+(
+
+xfinity_us
+311483"BA01450000000000
+(
+
+xfinity_us
+311484"BA01450000000000
+(
+
+xfinity_us
+311485"BA01450000000000
+(
+
+xfinity_us
+311486"BA01450000000000
+(
+
+xfinity_us
+311487"BA01450000000000
+(
+
+xfinity_us
+311488"BA01450000000000
+(
+
+xfinity_us
+311489"BA01450000000000
+
+metropcs_us
+311490"6D38
+
+
+tmobile_us
 311490
 2
 311500SPN=24-7 WIRELESS
@@ -2269,6 +2886,9 @@ tmobile_us
 
 311740
 311740
+
+astca_as
+311780
 
 cellcommno_us
 311840"C1
@@ -2321,8 +2941,15 @@ $
 
 tmobile_us
 312250
-
-312420
+
+	strata_us
+312290
+
+coppervalley_us
+312380
+
+
+nextech_us
 312420
 
 	sprint_us
@@ -2345,9 +2972,6 @@ $
 
 sprintwholesale_us
 312530
-
-312570
-312570
 
 fi_us
 312580"0001
@@ -2375,12 +2999,28 @@ $
 
 firstnet_us
 313140
-
-spectrum_data_us
+
+	altice_us
+313390
+)
+spectrum_us
+313450"BA01490000000000
+
+spectrumdata_us
 313450
-
-spectrum_cbrs_us
+
+tango_us
+313770
+
+
+liberty_pr
+313790
+
+spectrumcbrs_us
 314020
+
+xfinitymso_us
+314200
 
 	google_us
 315010
@@ -2394,8 +3034,8 @@ OPENMOBILE
 
 tracfone_pr
 330110"DEFF
-
-330110
+
+claro_pr
 330110
 
 334020
@@ -2516,11 +3156,12 @@ retemex_mx
 
 338180
 338180
-
-34001
+
+	orange_gp
 34001
-
-34020
+
+
+digicel_fr
 34020
 
 342600
@@ -2537,6 +3178,9 @@ retemex_mx
 
 34877
 34877
+
+paradisemobile_bm
+350007
 
 352110
 352110
@@ -3586,23 +4230,24 @@ cheers2_in
 
 41892
 41892
-
-41902
+
+zain_kw
 41902
-
-41903
+
+
+ooredoo_kw
 41903
-
-41904
+
+stc_kw
 41904
 
 stc_sa
 42001
-
-42003
+
+	mobily_sa
 42003
-
-42004
+
+zain_sa
 42004
 
 42101
@@ -3620,30 +4265,40 @@ cheers2_in
 
 ymobile_ye
 42111
-
-42202
+
+
+omantel_om
 42202
 
 42203
 42203
-
-42402
+
+
+omantel_om
+42204
+
+vodafone_om
+42206
+
+etisalat_ae
 42402
 
-42403
+du_ae
 42403
 
 dent_zz
 42501"
-3597bfd533
-
-42501
+3597BFD533
+
+
+partner_il
 42501
-
-42502
+
+
+cellcom_il
 42502
-
-42503
+
+pelephone_il
 42503
 
 42505
@@ -3657,8 +4312,9 @@ ymobile_ye
 
 42508
 42508
-
-42510
+
+
+partner_il
 42510
 
 42514
@@ -3669,24 +4325,33 @@ ymobile_ye
 
 42516
 42516
+
+019mobile_il
+42519
 
 
 annatel_il
 42526
-
-42601
+
+
+batelco_bh
 42601
-
-42602
+
+zain_bh
 42602
-
-42604
+
+stc_bh
 42604
-
-42701
+
+
+batelco_bh
+42605
+
+
+ooredoo_qa
 42701
-
-42702
+
+vodafone_qa
 42702
 
 42888
@@ -3806,12 +4471,18 @@ rakuten_jp
 
 softbank_jp
 44020
+
+uqmobile_jp
+44050"20
 
 kddi_jp
 44050
 
 kddi_jp
 44051"10
+
+uqmobile_jp
+44051"20
 
 povo_jp
 44051"26
@@ -3821,6 +4492,18 @@ rakuten_jp
 
 44052
 44052
+
+kddi_jp
+44054"10
+
+uqmobile5gsa_jp
+44054"20
+
+povo_jp
+44054"26
+
+kddimvno_jp
+44054
 
 44100
 44100
@@ -3836,8 +4519,8 @@ rakuten_jp
 
 kt_kr
 45004
-
-45005
+
+skt_kr
 45005
 
 
@@ -3867,6 +4550,9 @@ lguplus_kr
 
 45208
 45208
+*
+truphone_zz
+45400"547275554B3030656E
 
 csl_hk
 45400
@@ -3876,7 +4562,7 @@ lguplus_kr
 
 dent_zz
 45403"
-3597bfd533
+3597BFD533
 
 45403
 45403
@@ -3886,9 +4572,9 @@ lguplus_kr
 
 smartone_hk
 45406
-
-truphone_zz
-45408
+*
+truphone_zz
+45408"547275554B3030656E
 
 45410
 45410
@@ -3913,6 +4599,10 @@ lguplus_kr
 
 pccw_hk
 45419
+
+
+webbing_hk
+45435
 
 45500
 45500
@@ -4015,6 +4705,9 @@ lguplus_kr
 
 tstar_tw
 46689
+'
+circleslife_tw
+46692ç„¡æ¡†è¡Œå‹•
 
 cht_tw
 46692
@@ -4034,6 +4727,9 @@ lguplus_kr
 digi_my
 50210
 
+unifi_my
+50211
+
 maxis_my
 50212
 
@@ -4045,29 +4741,27 @@ lguplus_kr
 
 digi_my
 502143
-
-	celcom_my
-502145
 
 digi_my
 502146
 
 maxis_my
 502147
-
-	celcom_my
-502148
 
 yes_my
 502152
+
+unifi_my
+502153
 
 digi_my
 50216
 
 maxis_my
 50217
-
-50218
+
+
+umobile_my
 50218
 
 	celcom_my
@@ -4105,9 +4799,9 @@ $
 lycamobile_au
 50519
 Lycamobile
-
-truphone_zz
-50538
+*
+truphone_zz
+50538"547275554B3030656E
 
 
 telstra_au
@@ -4158,13 +4852,13 @@ telstra_au
 
 51403
 51403
-
-51502
+
+globe_ph
 51502
 
 dent_zz
 51503"
-3597bfd533
+3597BFD533
 
 51503
 51503
@@ -4174,6 +4868,9 @@ telstra_au
 
 51518
 51518
+
+dito_ph
+51566
 
 truemove_th
 52000"01
@@ -4229,23 +4926,26 @@ singtel_sg
 
 starhub_sg
 52505
+
+simba_sg
+52510
 
 52802
 52802
 
 52811
 52811
-
-53001
+
+vodafone_nz
 53001
-'
-53005IMSI=53005204
-5300553005204
-
-53005
+
+	skinny_nz
+53005Skinny
+
+spark_nz
 53005
-
-53024
+
+2degrees_nz
 53024
 
 53602
@@ -4298,6 +4998,9 @@ starhub_sg
 
 54601
 54601
+
+viti_pf
+54705
 
 54720
 54720
@@ -4502,9 +5205,6 @@ starhub_sg
 
 61925
 61925
-
-6200
-6200
 
 62001
 62001
@@ -4649,6 +5349,9 @@ starhub_sg
 
 63601
 63601
+
+safaricom_et
+63602
 
 63701
 63701
@@ -4752,12 +5455,15 @@ Lycamobile
 
 64602
 64602
-
-64700
+
+	orange_re
 64700
 
 64702
 64702
+
+zeop_re
+64704
 
 64710GID1=12
 64710"12
@@ -5108,6 +5814,9 @@ Lycamobile
 
 732187
 732187
+
+wom_co
+732360
 
 73401
 73401
@@ -5177,6 +5886,12 @@ Lycamobile
 
 74810
 74810
+
+ubigi_de
+90137Ubigi
 
 bics_be
-90158•ÛŽáo"”ÓÍ†
+90158
+
+verizononsitelte_us
+999480ß“ÄÛÁ"ý’Ã¨
