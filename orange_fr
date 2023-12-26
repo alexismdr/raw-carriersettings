@@ -94,10 +94,6 @@ configs {
     bool_value: true
   }
   config {
-    key: "carrier_volte_provisioning_required_bool"
-    bool_value: true
-  }
-  config {
     key: "carrier_vvm_package_name_string"
     text_value: "com.orange.vvm"
   }
@@ -132,24 +128,6 @@ configs {
   config {
     key: "ims.ipv6_sip_mtu_size_cellular_int"
     int_value: 1300
-  }
-  config {
-    key: "ims.mmtel_requires_provisioning_bundle"
-    bundle {
-      config {
-        key: "ims.capability_type_video_int_array"
-        int_array {
-          item: 0
-        }
-      }
-      config {
-        key: "ims.capability_type_voice_int_array"
-        int_array {
-          item: 0
-          item: 1
-        }
-      }
-    }
   }
   config {
     key: "ims.request_uri_type_int"

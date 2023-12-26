@@ -234,14 +234,6 @@ configs {
     bool_value: true
   }
   config {
-    key: "carrier_volte_provisioned_bool"
-    bool_value: true
-  }
-  config {
-    key: "carrier_volte_provisioning_required_bool"
-    bool_value: true
-  }
-  config {
     key: "cdma_enhanced_roaming_indicator_for_home_network_int_array"
     int_array {
       item: 1
@@ -415,24 +407,6 @@ configs {
   config {
     key: "ims.ipv6_sip_mtu_size_cellular_int"
     int_value: 1428
-  }
-  config {
-    key: "ims.mmtel_requires_provisioning_bundle"
-    bundle {
-      config {
-        key: "ims.capability_type_video_int_array"
-        int_array {
-          item: 0
-        }
-      }
-      config {
-        key: "ims.capability_type_voice_int_array"
-        int_array {
-          item: 0
-          item: 1
-        }
-      }
-    }
   }
   config {
     key: "ims.phone_context_domain_name_string"

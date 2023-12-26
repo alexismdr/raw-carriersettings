@@ -266,14 +266,6 @@ configs {
     bool_value: true
   }
   config {
-    key: "carrier_volte_override_wfc_provisioning_bool"
-    bool_value: true
-  }
-  config {
-    key: "carrier_volte_provisioned_bool"
-    bool_value: true
-  }
-  config {
     key: "carrier_wfc_ims_available_bool"
     bool_value: true
   }
