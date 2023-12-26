@@ -9,7 +9,6 @@ apns {
     protocol: IPV4V6
     roaming_protocol: IPV4V6
     user_visible: false
-    27: "1|2|3|8|9|10|13|14|15|18|20"
   }
   apn {
     name: "SKT LTE INTERNET"
@@ -117,7 +116,4 @@ configs {
     key: "support_conference_call_bool"
     bool_value: true
   }
-}
-8 {
-  1: 1698371893
 }

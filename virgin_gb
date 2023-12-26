@@ -31,7 +31,6 @@ apns {
     protocol: IPV4V6
     mtu: 1280
     user_visible: false
-    27: "1|2|3|8|9|10|13|14|15|18|20"
   }
 }
 configs {
@@ -247,7 +246,4 @@ configs {
     key: "wfc_spn_format_idx_int"
     int_value: 1
   }
-}
-8 {
-  1: 1695826684
 }

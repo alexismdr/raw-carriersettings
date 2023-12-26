@@ -9,7 +9,6 @@ apns {
     protocol: IPV4V6
     roaming_protocol: IPV4V6
     user_visible: false
-    27: "1|2|3|8|9|10|13|14|15|20"
   }
   apn {
     name: "Internet"
@@ -237,7 +236,4 @@ configs {
     key: "wfc_spn_format_idx_int"
     int_value: 1
   }
-}
-8 {
-  1: 1695826684
 }

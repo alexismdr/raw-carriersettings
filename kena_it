@@ -25,7 +25,6 @@ apns {
     bearer_bitmask: "14|20"
     protocol: IPV4V6
     user_visible: false
-    27: "1|2|3|8|9|10|13|14|15|20"
   }
   apn {
     name: "XCAP"
@@ -235,7 +234,4 @@ configs {
     key: "wfc_spn_format_idx_int"
     int_value: 11
   }
-}
-8 {
-  1: 1691701640
 }

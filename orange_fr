@@ -10,7 +10,6 @@ apns {
     roaming_protocol: IPV4V6
     mtu: 1300
     user_visible: false
-    27: "1|2|3|8|9|10|13|14|15|18|20"
   }
   apn {
     name: "Orange World"
@@ -413,7 +412,4 @@ configs {
     key: "wfc_spn_format_idx_int"
     int_value: 1
   }
-}
-8 {
-  1: 1692898844
 }

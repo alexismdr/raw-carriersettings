@@ -32,6 +32,3 @@ configs {
     text_value: "conference@ims.mnc006.mcc454.3gppnetwork.org"
   }
 }
-8 {
-  1: 1683249957
-}

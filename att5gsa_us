@@ -14,7 +14,6 @@ apns {
     protocol: IPV4V6
     roaming_protocol: IPV4V6
     user_editable: false
-    28: 1
   }
   apn {
     name: "ATT IMS"
@@ -24,7 +23,6 @@ apns {
     protocol: IPV4V6
     roaming_protocol: IPV4V6
     user_visible: false
-    28: 1
   }
   apn {
     name: "ATT Nrhotspot"
@@ -41,7 +39,6 @@ apns {
     protocol: IPV4V6
     roaming_protocol: IPV4V6
     user_visible: false
-    28: 1
   }
 }
 configs {
@@ -814,7 +811,4 @@ configs {
       item: "<?xml version=\"1.0\" encoding=\"UTF-8\"?><PasspointProfile><PPSMO><![CDATA[<MgmtTree xmlns=\"syncml:dmddf1.2\"><VerDTD>1.2</VerDTD><Node><NodeName>PerProviderSubscription</NodeName><RTProperties><Type><DDFName>urn:wfa:mo:hotspot2dot0-perprovidersubscription:1.0</DDFName></Type></RTProperties><Node><NodeName>i001</NodeName><Node><NodeName>HomeSP</NodeName><Node><NodeName>FriendlyName</NodeName><Value>AT&amp;T Passpoint</Value></Node><Node><NodeName>FQDN</NodeName><Value>attwifi.com</Value></Node></Node><Node><NodeName>Credential</NodeName><Node><NodeName>Realm</NodeName><Value>wlan.mnc410.mcc310.3gppnetwork.org</Value></Node><Node><NodeName>SIM</NodeName><Node><NodeName>IMSI</NodeName><Value>310410*</Value></Node><Node><NodeName>EAPType</NodeName><Value>23</Value></Node></Node></Node></Node></Node></MgmtTree>]]></PPSMO></PasspointProfile>"
     }
   }
-}
-8 {
-  1: 1692898844
 }

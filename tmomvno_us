@@ -31,7 +31,6 @@ apns {
     roaming_protocol: IPV4V6
     mtu: 1440
     user_visible: false
-    28: 1
   }
   apn {
     name: "T-Mobile MMS"
@@ -51,7 +50,6 @@ apns {
     protocol: IPV6
     roaming_protocol: IPV4V6
     user_visible: false
-    28: 1
   }
 }
 configs {
@@ -650,7 +648,4 @@ configs {
     text_array {
     }
   }
-}
-8 {
-  1: 1695826684
 }

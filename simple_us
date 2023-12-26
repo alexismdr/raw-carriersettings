@@ -20,7 +20,6 @@ apns {
     roaming_protocol: IPV4V6
     mtu: 1440
     user_visible: false
-    28: 1
   }
 }
 configs {
@@ -548,7 +547,4 @@ configs {
     key: "wifi.avoid_5ghz_wifi_direct_for_laa_bool"
     bool_value: true
   }
-}
-8 {
-  1: 1695826684
 }

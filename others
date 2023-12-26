@@ -6058,7 +6058,6 @@ setting {
       protocol: IPV6
       mtu: 1440
       user_visible: false
-      28: 1
     }
     apn {
       name: "Vodafone US IMS"
@@ -6069,7 +6068,6 @@ setting {
       roaming_protocol: IPV6
       mtu: 1440
       user_visible: false
-      28: 1
     }
     apn {
       name: "Vodafone US Service"
@@ -23790,7 +23788,6 @@ setting {
       bearer_bitmask: "14|18|20"
       protocol: IPV4V6
       mtu: 1300
-      27: "1|2|3|8|9|10|13|14|15|18|20"
     }
     apn {
       name: "Orange World"
@@ -26237,7 +26234,4 @@ setting {
       bool_value: false
     }
   }
-}
-4 {
-  1: 1695826684
 }

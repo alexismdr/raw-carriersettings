@@ -199,6 +199,3 @@ configs {
     bool_value: false
   }
 }
-8 {
-  1: 1692898844
-}

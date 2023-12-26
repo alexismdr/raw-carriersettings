@@ -472,6 +472,3 @@ vendor_configs {
     value: "\nD\n1rilext.skip_fdn_for_normal_routing_emergency_call\022\017208,228,466,525"
   }
 }
-8 {
-  1: 1695599029
-}

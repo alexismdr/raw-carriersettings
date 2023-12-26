@@ -25,7 +25,6 @@ apns {
     protocol: IPV6
     roaming_protocol: IPV4V6
     user_visible: false
-    28: 1
   }
   apn {
     name: "T-Mobile Emergency"
@@ -34,7 +33,6 @@ apns {
     protocol: IPV4V6
     roaming_protocol: IPV6
     user_visible: false
-    28: 1
   }
 }
 configs {
@@ -621,7 +619,4 @@ configs {
     text_array {
     }
   }
-}
-8 {
-  1: 1695599029
 }

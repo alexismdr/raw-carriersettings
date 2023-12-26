@@ -9,7 +9,6 @@ apns {
     protocol: IPV4V6
     roaming_protocol: IPV4V6
     user_visible: false
-    27: "1|2|3|8|9|10|13|14|15|18|20"
   }
   apn {
     name: "Internet"
@@ -375,7 +374,4 @@ configs {
       item: "<?xml version=\"1.0\" encoding=\"UTF-8\"?><WifiNetwork><SSID>Telekom_SIM</SSID><Credential><SIM><EAPType>23</EAPType></SIM></Credential></WifiNetwork>"
     }
   }
-}
-8 {
-  1: 1695826684
 }
