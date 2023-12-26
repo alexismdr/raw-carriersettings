@@ -1,0 +1,27 @@
+canonical_name: "default"
+version: 30000000036
+configs {
+  config {
+    key: "carrier_promote_wfc_on_call_fail_bool"
+    bool_value: true
+  }
+  config {
+    key: "carrier_volte_tty_supported_bool"
+    bool_value: false
+  }
+  config {
+    key: "config_ims_rcs_package_override_string"
+    text_value: "com.google.android.ims"
+  }
+  config {
+    key: "gps.lpp_profile"
+    text_value: "2"
+  }
+  config {
+    key: "show_iccid_in_sim_status_bool"
+    bool_value: true
+  }
+}
+8 {
+  1: 1624467880
+}

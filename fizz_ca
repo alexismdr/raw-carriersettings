@@ -1,0 +1,47 @@
+canonical_name: "fizz_ca"
+version: 30000000012
+apns {
+  apn {
+    name: "mobile.bm"
+    value: "mobile.bm"
+    type: DEFAULT
+    type: MMS
+    type: SUPL
+    mmsc: "http://mms.mobile.bm"
+    mmsc_proxy: "mmsproxy.mobile.bm"
+    mmsc_proxy_port: "80"
+    user_editable: false
+  }
+}
+configs {
+  config {
+    key: "carrier_nr_availabilities_int_array"
+    int_array {
+    }
+  }
+  config {
+    key: "hide_lte_plus_data_icon_bool"
+    bool_value: false
+  }
+  config {
+    key: "is_ims_conference_size_enforced_bool"
+    bool_value: true
+  }
+  config {
+    key: "lte_plus_threshold_bandwidth_khz_int"
+    int_value: 0
+  }
+  config {
+    key: "non_roaming_operator_string_array"
+    text_array {
+      item: "302"
+    }
+  }
+  config {
+    key: "support_no_reply_timer_for_cfnry_bool"
+    bool_value: false
+  }
+}
+8 {
+  1: 1622082274
+}

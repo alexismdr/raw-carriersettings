@@ -1,0 +1,99 @@
+canonical_name: "starhub_sg"
+version: 30000000410
+apns {
+  apn {
+    name: "SH Data Postpaid"
+    value: "shwap"
+    type: DEFAULT
+    type: SUPL
+    apn_set_id: 1
+  }
+  apn {
+    name: "SH MMS Postpaid"
+    value: "shmms"
+    type: MMS
+    mmsc: "http://mms.starhubgee.com.sg:8002/"
+    mmsc_proxy: "10.12.1.80"
+    mmsc_proxy_port: "80"
+    apn_set_id: 1
+  }
+  apn {
+    name: "SH Data Prepaid"
+    value: "shppd"
+    type: DEFAULT
+    type: SUPL
+    apn_set_id: 2
+  }
+  apn {
+    name: "SH MMS Prepaid"
+    value: "shppd"
+    type: MMS
+    mmsc: "http://mms.starhubgee.com.sg:8002/"
+    mmsc_proxy: "10.12.1.80"
+    mmsc_proxy_port: "80"
+    apn_set_id: 2
+  }
+  apn {
+    name: "SH ims"
+    value: "ims"
+    type: IMS
+    bearer_bitmask: "14|18|20"
+    user_visible: false
+    apn_set_id: -1
+  }
+}
+configs {
+  config {
+    key: "carrier_default_wfc_ims_enabled_bool"
+    bool_value: true
+  }
+  config {
+    key: "carrier_default_wfc_ims_mode_int"
+    int_value: 1
+  }
+  config {
+    key: "carrier_ussd_method_int"
+    int_value: 2
+  }
+  config {
+    key: "carrier_volte_available_bool"
+    bool_value: true
+  }
+  config {
+    key: "carrier_wfc_ims_available_bool"
+    bool_value: false
+  }
+  config {
+    key: "default_preferred_apn_name_string"
+    text_value: "shwap"
+  }
+  config {
+    key: "editable_wfc_mode_bool"
+    bool_value: false
+  }
+  config {
+    key: "gsm_cdma_calls_can_be_hd_audio"
+    bool_value: true
+  }
+  config {
+    key: "is_ims_conference_size_enforced_bool"
+    bool_value: true
+  }
+  config {
+    key: "iwlan.add_ke_to_child_session_rekey_bool"
+    bool_value: true
+  }
+  config {
+    key: "iwlan.diffie_hellman_groups_int_array"
+    int_array {
+      item: 14
+    }
+  }
+  config {
+    key: "wfc_spn_format_idx_int"
+    int_value: 1
+  }
+}
+8 {
+  1: 1622082274
+}

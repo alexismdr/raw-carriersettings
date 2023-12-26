@@ -1,0 +1,164 @@
+canonical_name: "orange_es"
+version: 30000000418
+apns {
+  apn {
+    name: "Orange Internet M\303\263vil"
+    value: ""
+    type: IA
+  }
+  apn {
+    name: "Orange Internet M\303\263vil"
+    value: "orangeworld"
+    type: DEFAULT
+    user: "orange"
+    password: "orange"
+    authtype: 1
+    user_editable: false
+  }
+  apn {
+    name: "Orange Es IMS"
+    value: "ims"
+    type: IMS
+    bearer_bitmask: "14|18|20"
+    protocol: IPV4V6
+    mtu: 1400
+    user_visible: false
+  }
+  apn {
+    name: "Orange Es IMS"
+    value: "ims"
+    type: IMS
+    bearer_bitmask: "18"
+    protocol: IPV4V6
+    roaming_protocol: IPV4V6
+    mtu: 1400
+    user_visible: false
+  }
+  apn {
+    name: "Orange MMS"
+    value: "orangemms"
+    type: MMS
+    user: "orange"
+    password: "orange"
+    authtype: 1
+    mmsc: "http://mms.orange.es"
+    mmsc_proxy: "172.22.188.25"
+    mmsc_proxy_port: "8080"
+    user_editable: false
+  }
+  apn {
+    name: "Orange Internet PC"
+    value: "internet"
+    type: DUN
+    user: "orange"
+    password: "orange"
+    authtype: 0
+    user_editable: false
+  }
+}
+configs {
+  config {
+    key: "carrier_certificate_string_array"
+    text_array {
+      item: "B67AFFCDA89E3193B1595036D7C6CDBE22BE5CA24C9F6CF93FC6B48F91D7310D:com.orange.phone,com.orange.miorange"
+    }
+  }
+  config {
+    key: "carrier_default_wfc_ims_enabled_bool"
+    bool_value: true
+  }
+  config {
+    key: "carrier_default_wfc_ims_mode_int"
+    int_value: 1
+  }
+  config {
+    key: "carrier_default_wfc_ims_roaming_enabled_bool"
+    bool_value: true
+  }
+  config {
+    key: "carrier_ussd_method_int"
+    int_value: 2
+  }
+  config {
+    key: "carrier_volte_available_bool"
+    bool_value: false
+  }
+  config {
+    key: "carrier_wfc_ims_available_bool"
+    bool_value: false
+  }
+  config {
+    key: "default_vm_number_string"
+    text_value: "242"
+  }
+  config {
+    key: "ims_reasoninfo_mapping_string_array"
+    text_array {
+      item: "*|Call is dropped due to Wi-Fi signal is degraded|1407"
+    }
+  }
+  config {
+    key: "iwlan.add_ke_to_child_session_rekey_bool"
+    bool_value: true
+  }
+  config {
+    key: "iwlan.child_sa_rekey_hard_timer_sec_int"
+    int_value: 64900
+  }
+  config {
+    key: "iwlan.child_sa_rekey_soft_timer_sec_int"
+    int_value: 64800
+  }
+  config {
+    key: "iwlan.diffie_hellman_groups_int_array"
+    int_array {
+      item: 14
+      item: 5
+    }
+  }
+  config {
+    key: "iwlan.ike_rekey_hard_timer_in_sec"
+    int_value: 64900
+  }
+  config {
+    key: "iwlan.ike_rekey_soft_timer_sec_int"
+    int_value: 64800
+  }
+  config {
+    key: "iwlan.key_error_policy_config_string"
+    text_value: "[{\"ApnName\": \"*\",\"ErrorTypes\": [{\"ErrorType\": \"IKE_PROTOCOL_ERROR_TYPE\",\"ErrorDetails\": [\"*\"],\"RetryArray\": [\"4\", \"8\", \"43200\", \"-1\"],\"UnthrottlingEvents\": [\"WIFI_DISABLE_EVENT\"]}, {\"ErrorType\": \"IKE_PROTOCOL_ERROR_TYPE\",\"ErrorDetails\": [\"9000\", \"11001\", \"11011\"],\"RetryArray\": [\"43200\"],\"UnthrottlingEvents\": [\"APM_ENABLE_EVENT\", \"WIFI_DISABLE_EVENT\", \"WIFI_AP_CHANGED_EVENT\", \"WIFI_CALLING_DISABLE_EVENT\"]}, {\"ErrorType\": \"IKE_PROTOCOL_ERROR_TYPE\",\"ErrorDetails\": [\"9006\"],\"RetryArray\": [\"86400\"],\"UnthrottlingEvents\": [\"APM_ENABLE_EVENT\", \"WIFI_DISABLE_EVENT\", \"WIFI_AP_CHANGED_EVENT\", \"WIFI_CALLING_DISABLE_EVENT\"]}]}]"
+  }
+  config {
+    key: "maxImageHeight"
+    int_value: 1944
+  }
+  config {
+    key: "maxImageWidth"
+    int_value: 2592
+  }
+  config {
+    key: "maxMessageSize"
+    int_value: 1048576
+  }
+  config {
+    key: "show_4g_for_lte_data_icon_bool"
+    bool_value: true
+  }
+  config {
+    key: "unloggable_numbers_string_array"
+    text_array {
+      item: "900018018"
+    }
+  }
+  config {
+    key: "use_wfc_home_network_mode_in_roaming_network_bool"
+    bool_value: true
+  }
+  config {
+    key: "wfc_spn_format_idx_int"
+    int_value: 1
+  }
+}
+8 {
+  1: 1622082274
+}

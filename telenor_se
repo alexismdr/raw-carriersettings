@@ -1,0 +1,68 @@
+canonical_name: "telenor_se"
+version: 30000000504
+apns {
+  apn {
+    name: "Telenor MMS"
+    value: "mms"
+    type: MMS
+    mmsc: "http://mms"
+    mmsc_proxy: "172.30.253.241"
+    mmsc_proxy_port: "8799"
+  }
+  apn {
+    name: "Telenor Mobilsurf"
+    value: "services.telenor.se"
+    type: DEFAULT
+    type: SUPL
+  }
+  apn {
+    name: "IMS"
+    value: "IMS"
+    type: IMS
+    bearer_bitmask: "14|18|20"
+    protocol: IPV4V6
+    roaming_protocol: IPV4V6
+    user_visible: false
+  }
+}
+configs {
+  config {
+    key: "carrier_default_wfc_ims_roaming_enabled_bool"
+    bool_value: false
+  }
+  config {
+    key: "carrier_ussd_method_int"
+    int_value: 2
+  }
+  config {
+    key: "carrier_volte_available_bool"
+    bool_value: false
+  }
+  config {
+    key: "carrier_wfc_ims_available_bool"
+    bool_value: false
+  }
+  config {
+    key: "is_ims_conference_size_enforced_bool"
+    bool_value: true
+  }
+  config {
+    key: "maxImageHeight"
+    int_value: 1944
+  }
+  config {
+    key: "maxImageWidth"
+    int_value: 2592
+  }
+  config {
+    key: "maxMessageSize"
+    int_value: 614400
+  }
+  config {
+    key: "show_4g_for_lte_data_icon_bool"
+    bool_value: true
+  }
+}
+8 {
+  1: 1624467880
+}

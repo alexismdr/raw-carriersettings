@@ -1,0 +1,162 @@
+canonical_name: "airtel_in"
+version: 30000000017
+apns {
+  apn {
+    name: "Mobile Office"
+    value: "airtelgprs.com"
+    type: DEFAULT
+    type: SUPL
+    protocol: IPV4V6
+  }
+  apn {
+    name: "AIRTEL LIVE"
+    value: "airtelfun.com"
+    type: DEFAULT
+    type: SUPL
+    proxy: "100.1.200.99"
+    port: "8080"
+    protocol: IPV4V6
+  }
+  apn {
+    name: "Airtel MMS"
+    value: "airtelmms.com"
+    type: MMS
+    authtype: 1
+    mmsc: "http://100.1.201.171:10021/mmsc"
+    mmsc_proxy: "100.1.201.172"
+    mmsc_proxy_port: "8799"
+    protocol: IPV4V6
+  }
+  apn {
+    name: "IMS"
+    value: "ims"
+    type: IMS
+    bearer_bitmask: "14|18|20"
+    protocol: IPV4V6
+    roaming_protocol: IPV4V6
+    user_visible: false
+  }
+}
+configs {
+  config {
+    key: "auto_retry_failed_wifi_emergency_call"
+    bool_value: true
+  }
+  config {
+    key: "carrier_certificate_string_array"
+    text_array {
+      item: "7170F9C35AC5966C1687372089AF55713DACC17635BAD248370DA67DDF8472B6"
+      item: "FB9FD5425AB63FA933CF8125B2F3EFC0DF11F0DE0C9C01EF2F2B71A3EBD135A3"
+    }
+  }
+  config {
+    key: "carrier_default_wfc_ims_enabled_bool"
+    bool_value: true
+  }
+  config {
+    key: "carrier_default_wfc_ims_roaming_enabled_bool"
+    bool_value: true
+  }
+  config {
+    key: "carrier_name_override_bool"
+    bool_value: true
+  }
+  config {
+    key: "carrier_name_string"
+    text_value: "airtel"
+  }
+  config {
+    key: "carrier_nr_availabilities_int_array"
+    int_array {
+    }
+  }
+  config {
+    key: "carrier_ussd_method_int"
+    int_value: 1
+  }
+  config {
+    key: "carrier_volte_available_bool"
+    bool_value: true
+  }
+  config {
+    key: "carrier_wfc_ims_available_bool"
+    bool_value: false
+  }
+  config {
+    key: "ims_reasoninfo_mapping_string_array"
+    text_array {
+      item: "*|Call is dropped due to Wi-Fi signal is degraded|1407"
+    }
+  }
+  config {
+    key: "is_ims_conference_size_enforced_bool"
+    bool_value: true
+  }
+  config {
+    key: "iwlan.child_sa_rekey_hard_timer_sec_int"
+    int_value: 28800
+  }
+  config {
+    key: "iwlan.child_sa_rekey_soft_timer_sec_int"
+    int_value: 28700
+  }
+  config {
+    key: "iwlan.ike_rekey_hard_timer_in_sec"
+    int_value: 86400
+  }
+  config {
+    key: "iwlan.ike_rekey_soft_timer_sec_int"
+    int_value: 86300
+  }
+  config {
+    key: "iwlan.ike_remote_id_type_int"
+    int_value: 11
+  }
+  config {
+    key: "non_roaming_operator_string_array"
+    text_array {
+      item: "21401"
+      item: "21402"
+      item: "21403"
+      item: "21404"
+      item: "21406"
+      item: "21407"
+      item: "21408"
+      item: "21409"
+      item: "214010"
+      item: "214011"
+      item: "214012"
+      item: "214013"
+      item: "214014"
+      item: "214015"
+      item: "214016"
+      item: "214017"
+      item: "214018"
+      item: "214019"
+      item: "214020"
+      item: "214021"
+    }
+  }
+  config {
+    key: "roaming_operator_string_array"
+    text_array {
+      item: "404"
+      item: "405"
+    }
+  }
+  config {
+    key: "smart_forwarding_config_component_name_string"
+    text_value: "com.qti.xdivert/com.qti.xdivert.XDivertSetting"
+  }
+  config {
+    key: "use_wfc_home_network_mode_in_roaming_network_bool"
+    bool_value: true
+  }
+  config {
+    key: "wfc_spn_format_idx_int"
+    int_value: 1
+  }
+}
+8 {
+  1: 1622082274
+}

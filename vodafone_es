@@ -1,0 +1,70 @@
+canonical_name: "vodafone_es"
+version: 30000000415
+apns {
+  apn {
+    name: "INTERNET"
+    value: "airtelnet.es"
+    type: DUN
+    user: "vodafone"
+    password: "vodafone"
+    authtype: 1
+    user_visible: false
+  }
+  apn {
+    name: "Internet m\303\263vil"
+    value: "airtelwap.es"
+    type: DEFAULT
+    type: SUPL
+    user: "wap@wap"
+    password: "wap125"
+    authtype: 1
+  }
+  apn {
+    name: "MMS VODAFONE"
+    value: "mms.vodafone.net"
+    type: MMS
+    user: "wap@wap"
+    password: "wap125"
+    authtype: 1
+    mmsc: "http://mmsc.vodafone.es/servlets/mms"
+    mmsc_proxy: "212.73.32.10"
+    mmsc_proxy_port: "80"
+  }
+  apn {
+    name: "IMS"
+    value: "ims"
+    type: IMS
+    protocol: IPV4V6
+    roaming_protocol: IPV4V6
+    user_visible: false
+  }
+}
+configs {
+  config {
+    key: "carrier_supports_ss_over_ut_bool"
+    bool_value: false
+  }
+  config {
+    key: "carrier_ussd_method_int"
+    int_value: 2
+  }
+  config {
+    key: "csp_enabled_bool"
+    bool_value: true
+  }
+  config {
+    key: "default_vm_number_string"
+    text_value: "22177"
+  }
+  config {
+    key: "show_4g_for_lte_data_icon_bool"
+    bool_value: true
+  }
+  config {
+    key: "volte_replacement_rat_int"
+    int_value: 3
+  }
+}
+8 {
+  1: 1622082274
+}

@@ -1,0 +1,28 @@
+canonical_name: "stc_sa"
+version: 30000000624
+apns {
+  apn {
+    name: "STC - GPRS"
+    value: "jawalnet.com.sa"
+    type: DEFAULT
+    type: SUPL
+  }
+  apn {
+    name: "STC MMS"
+    value: "mms.net.sa"
+    type: MMS
+    mmsc: "http://mms.net.sa:8002/"
+    mmsc_proxy: "10.1.1.1"
+    mmsc_proxy_port: "8080"
+  }
+}
+configs {
+  config {
+    key: "carrier_nr_availabilities_int_array"
+    int_array {
+    }
+  }
+}
+8 {
+  1: 1622082274
+}

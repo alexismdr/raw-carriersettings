@@ -1,0 +1,62 @@
+canonical_name: "homobile_it"
+version: 30000000572
+apns {
+  apn {
+    name: "ho."
+    value: "web.ho-mobile.it"
+    type: DEFAULT
+    type: SUPL
+    type: HIPRI
+    type: FOTA
+    authtype: 0
+  }
+  apn {
+    name: "ho. (Tethering)"
+    value: "internet.ho-mobile.it"
+    type: DUN
+    authtype: 0
+  }
+  apn {
+    name: "IMS"
+    value: "ims"
+    type: IMS
+    bearer_bitmask: "14|18|20"
+    protocol: IPV4V6
+    roaming_protocol: IPV4V6
+    user_visible: false
+  }
+}
+configs {
+  config {
+    key: "carrier_ussd_method_int"
+    int_value: 2
+  }
+  config {
+    key: "carrier_volte_available_bool"
+    bool_value: false
+  }
+  config {
+    key: "default_vm_number_string"
+    text_value: "42020"
+  }
+  config {
+    key: "read_only_apn_types_string_array"
+    text_array {
+    }
+  }
+  config {
+    key: "show_4g_for_lte_data_icon_bool"
+    bool_value: true
+  }
+  config {
+    key: "smsToMmsTextThreshold"
+    int_value: 10
+  }
+  config {
+    key: "volte_replacement_rat_int"
+    int_value: 3
+  }
+}
+8 {
+  1: 1622082274
+}

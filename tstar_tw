@@ -1,0 +1,63 @@
+canonical_name: "tstar_tw"
+version: 30000000508
+apns {
+  apn {
+    name: "T Star-internet"
+    value: "internet"
+    type: DEFAULT
+    type: SUPL
+  }
+  apn {
+    name: "T Star-MMS"
+    value: "internet"
+    type: MMS
+    mmsc: "http://mms.vibo.net.tw"
+    mmsc_proxy: "172.24.128.36"
+    mmsc_proxy_port: "8080"
+    user_editable: false
+  }
+  apn {
+    name: "T Star-IMS"
+    value: "ims"
+    type: IMS
+    bearer_bitmask: "14|18|20"
+    user_editable: false
+  }
+}
+configs {
+  config {
+    key: "5g_icon_configuration_string"
+    text_value: "connected_mmwave:5G,connected:5G,not_restricted_rrc_idle:5G"
+  }
+  config {
+    key: "5g_icon_display_grace_period_string"
+    text_value: "connected_mmwave,legacy,31;connected,legacy,31;connected_mmwave,not_restricted_rrc_con,31;connected,not_restricted_rrc_con,31;not_restricted_rrc_idle,not_restricted_rrc_con,15"
+  }
+  config {
+    key: "carrier_ussd_method_int"
+    int_value: 2
+  }
+  config {
+    key: "carrier_volte_available_bool"
+    bool_value: false
+  }
+  config {
+    key: "hide_lte_plus_data_icon_bool"
+    bool_value: false
+  }
+  config {
+    key: "lte_endc_using_user_data_for_rrc_detection_bool"
+    bool_value: true
+  }
+  config {
+    key: "support_ims_conference_call_bool"
+    bool_value: false
+  }
+  config {
+    key: "support_ims_conference_event_package_bool"
+    bool_value: false
+  }
+}
+8 {
+  1: 1625805535
+}

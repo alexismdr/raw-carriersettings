@@ -1,0 +1,63 @@
+canonical_name: "verymobile_it"
+version: 30000000576
+apns {
+  apn {
+    name: "IMS"
+    value: "ims"
+    type: IMS
+    bearer_bitmask: "1|2|3|9|10|11|13|14|15|20"
+    user_visible: false
+  }
+  apn {
+    name: "Internet"
+    value: "internet.it"
+    type: DEFAULT
+    type: SUPL
+    user_editable: false
+  }
+  apn {
+    name: "MMS"
+    value: "mms.it"
+    type: MMS
+    mmsc: "http://mms.windtre.it"
+    mmsc_proxy: "mmsproxy.windtre.it"
+    mmsc_proxy_port: "8080"
+  }
+}
+configs {
+  config {
+    key: "carrier_certificate_string_array"
+    text_array {
+      item: "7A6D2E2EDEA23A93FA95A447535675CFB543919698196FB720B1520658D25DC7"
+      item: "A69A419CFB5FB8344D2AEDCED6BC2A7FCB74F85161BCA9265C54E95E478839C3"
+      item: "998DA7CED0E1A3A14E51FAEF1F8608A494BDA791B6609A1C5E599F9B64F01674"
+    }
+  }
+  config {
+    key: "carrier_supports_ss_over_ut_bool"
+    bool_value: false
+  }
+  config {
+    key: "carrier_ussd_method_int"
+    int_value: 2
+  }
+  config {
+    key: "carrier_volte_available_bool"
+    bool_value: false
+  }
+  config {
+    key: "default_vm_number_string"
+    text_value: "4200"
+  }
+  config {
+    key: "hide_ims_apn_bool"
+    bool_value: true
+  }
+  config {
+    key: "show_4g_for_lte_data_icon_bool"
+    bool_value: true
+  }
+}
+8 {
+  1: 1624467880
+}

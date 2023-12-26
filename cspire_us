@@ -1,0 +1,181 @@
+canonical_name: "cspire_us"
+version: 30000000431
+apns {
+  apn {
+    name: "C Spire OTA"
+    value: "admin.cs4glte.com"
+    type: FOTA
+    bearer_bitmask: "13|14"
+    protocol: IPV4V6
+  }
+  apn {
+    name: "C Spire IMS"
+    value: "ims"
+    type: IMS
+    bearer_bitmask: "14|18|20"
+    protocol: IPV4V6
+  }
+  apn {
+    name: "C Spire Internet"
+    value: "internet.cs4glte.com"
+    type: DEFAULT
+    type: MMS
+    mmsc: "http://pix.cspire.com/servlets/mms"
+    protocol: IPV4V6
+  }
+  apn {
+    name: "C Spire tether"
+    value: "tethering.cs4glte.com"
+    type: DUN
+    bearer_bitmask: "13|14"
+    protocol: IPV4V6
+    user_editable: false
+  }
+}
+configs {
+  config {
+    key: "carrier_default_wfc_ims_mode_int"
+    int_value: 1
+  }
+  config {
+    key: "carrier_default_wfc_ims_roaming_enabled_bool"
+    bool_value: true
+  }
+  config {
+    key: "carrier_ussd_method_int"
+    int_value: 2
+  }
+  config {
+    key: "carrier_volte_available_bool"
+    bool_value: false
+  }
+  config {
+    key: "carrier_wfc_ims_available_bool"
+    bool_value: false
+  }
+  config {
+    key: "cdma_3waycall_flash_delay_int"
+    int_value: 300
+  }
+  config {
+    key: "config_telephony_use_own_number_for_voicemail_bool"
+    bool_value: true
+  }
+  config {
+    key: "emailGatewayNumber"
+    text_value: "6245"
+  }
+  config {
+    key: "emergency_number_prefix_string_array"
+    text_array {
+      item: "*272"
+    }
+  }
+  config {
+    key: "enableMultipartSMS"
+    bool_value: false
+  }
+  config {
+    key: "enableSMSDeliveryReports"
+    bool_value: false
+  }
+  config {
+    key: "gsm_nonroaming_networks_string_array"
+    text_array {
+      item: "310260"
+    }
+  }
+  config {
+    key: "httpParams"
+    text_value: "X-CS3G-MDN: 1##LINE1NOCOUNTRYCODE##"
+  }
+  config {
+    key: "imsserviceentitlement.entitlement_server_url_string"
+    text_value: "https://aes.mnc230.mcc311.pub.3gppnetwork.org/DEGDROIDInterfaceTS43"
+  }
+  config {
+    key: "imsserviceentitlement.fcm_sender_id_string"
+    text_value: "708605173519"
+  }
+  config {
+    key: "imsserviceentitlement.show_vowifi_webview_bool"
+    bool_value: true
+  }
+  config {
+    key: "iwlan.epdg_address_priority_int_array"
+    int_array {
+      item: 0
+    }
+  }
+  config {
+    key: "iwlan.epdg_static_address_string"
+    text_value: "epdg.epc.mnc230.mcc311.pub.3gppnetwork.org"
+  }
+  config {
+    key: "maxImageHeight"
+    int_value: 2432
+  }
+  config {
+    key: "maxImageWidth"
+    int_value: 4320
+  }
+  config {
+    key: "maxMessageSize"
+    int_value: 1048576
+  }
+  config {
+    key: "maxSubjectLength"
+    int_value: 80
+  }
+  config {
+    key: "non_roaming_operator_string_array"
+    text_array {
+      item: "310"
+      item: "311"
+      item: "312"
+      item: "313"
+      item: "314"
+      item: "315"
+      item: "316"
+    }
+  }
+  config {
+    key: "recipientLimit"
+    int_value: 20
+  }
+  config {
+    key: "sim_country_iso_override_string"
+    text_value: "us"
+  }
+  config {
+    key: "support_ss_over_cdma_bool"
+    bool_value: true
+  }
+  config {
+    key: "support_swap_after_merge_bool"
+    bool_value: false
+  }
+  config {
+    key: "tty_supported_bool"
+    bool_value: true
+  }
+  config {
+    key: "use_wfc_home_network_mode_in_roaming_network_bool"
+    bool_value: true
+  }
+  config {
+    key: "volte_replacement_rat_int"
+    int_value: 6
+  }
+  config {
+    key: "wfc_emergency_address_carrier_app_string"
+    text_value: "com.android.imsserviceentitlement/.WfcActivationActivity"
+  }
+  config {
+    key: "wfc_spn_format_idx_int"
+    int_value: 1
+  }
+}
+8 {
+  1: 1628001617
+}

@@ -1,0 +1,66 @@
+canonical_name: "vodafone_tr"
+version: 30000000484
+apns {
+  apn {
+    name: "Vodafone Internet"
+    value: "internet"
+    type: DEFAULT
+    type: SUPL
+    user: "vodafone"
+    password: "vodafone"
+    authtype: 0
+  }
+  apn {
+    name: "Vodafone MMS"
+    value: "mms"
+    type: MMS
+    user: "vodafone"
+    password: "vodafone"
+    authtype: 0
+    mmsc: "http://217.31.233.18:6001/MM1Servlet"
+    mmsc_proxy: "217.31.233.18"
+    mmsc_proxy_port: "9401"
+    mtu: 1340
+  }
+  apn {
+    name: "ims"
+    value: "ims"
+    type: IMS
+    bearer_bitmask: "14|18|20"
+    user_visible: false
+  }
+}
+configs {
+  config {
+    key: "carrier_default_wfc_ims_mode_int"
+    int_value: 1
+  }
+  config {
+    key: "carrier_nr_availabilities_int_array"
+    int_array {
+    }
+  }
+  config {
+    key: "carrier_ussd_method_int"
+    int_value: 2
+  }
+  config {
+    key: "carrier_volte_available_bool"
+    bool_value: false
+  }
+  config {
+    key: "carrier_wfc_ims_available_bool"
+    bool_value: false
+  }
+  config {
+    key: "default_vm_number_string"
+    text_value: "+905427542000"
+  }
+  config {
+    key: "wfc_spn_format_idx_int"
+    int_value: 11
+  }
+}
+8 {
+  1: 1622082274
+}

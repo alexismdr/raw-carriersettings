@@ -1,0 +1,273 @@
+canonical_name: "simple_us"
+version: 30000000536
+apns {
+  apn {
+    name: "SIMPLE"
+    value: "simple"
+    type: DEFAULT
+    type: MMS
+    type: SUPL
+    type: HIPRI
+    type: FOTA
+    mmsc: "http://smpl.mms.msg.eng.t-mobile.com/mms/wapenc"
+  }
+  apn {
+    name: "SIMPLE IMS"
+    value: "ims"
+    type: IMS
+    bearer_bitmask: "14|20"
+    protocol: IPV6
+    mtu: 1440
+    user_visible: false
+  }
+  apn {
+    name: "SIMPLE IMS"
+    value: "ims"
+    type: IMS
+    bearer_bitmask: "18"
+    protocol: IPV6
+    roaming_protocol: IPV6
+    mtu: 1440
+    user_visible: false
+  }
+}
+configs {
+  config {
+    key: "5g_icon_display_grace_period_string"
+    text_value: "connected_mmwave,legacy,30;connected,legacy,30;not_restricted_rrc_idle,legacy,30;not_restricted_rrc_con,legacy,30"
+  }
+  config {
+    key: "call_composer_picture_server_url_string"
+    text_value: ""
+  }
+  config {
+    key: "carrier_certificate_string_array"
+    text_array {
+    }
+  }
+  config {
+    key: "carrier_default_data_roaming_enabled_bool"
+    bool_value: false
+  }
+  config {
+    key: "carrier_default_wfc_ims_enabled_bool"
+    bool_value: true
+  }
+  config {
+    key: "carrier_default_wfc_ims_mode_int"
+    int_value: 1
+  }
+  config {
+    key: "carrier_default_wfc_ims_roaming_enabled_bool"
+    bool_value: true
+  }
+  config {
+    key: "carrier_default_wfc_ims_roaming_mode_int"
+    int_value: 2
+  }
+  config {
+    key: "carrier_ims_gba_required_bool"
+    bool_value: true
+  }
+  config {
+    key: "carrier_supports_ss_over_ut_bool"
+    bool_value: false
+  }
+  config {
+    key: "carrier_ussd_method_int"
+    int_value: 1
+  }
+  config {
+    key: "carrier_volte_available_bool"
+    bool_value: true
+  }
+  config {
+    key: "carrier_vt_available_bool"
+    bool_value: false
+  }
+  config {
+    key: "carrier_wfc_ims_available_bool"
+    bool_value: true
+  }
+  config {
+    key: "data_limit_threshold_bytes_long"
+    long_value: 107374182400
+  }
+  config {
+    key: "editable_voicemail_number_setting_bool"
+    bool_value: false
+  }
+  config {
+    key: "emergency_number_prefix_string_array"
+    text_array {
+      item: "*272"
+    }
+  }
+  config {
+    key: "enable_carrier_display_name_resolver_bool"
+    bool_value: false
+  }
+  config {
+    key: "gba_ua_tls_cipher_suite_int"
+    int_value: 47
+  }
+  config {
+    key: "gsm_roaming_networks_string_array"
+    text_array {
+      item: "310032"
+      item: "310033"
+      item: "310110"
+      item: "310140"
+      item: "310370"
+      item: "310400"
+      item: "310470"
+      item: "310500"
+      item: "310970"
+      item: "311170"
+      item: "311250"
+    }
+  }
+  config {
+    key: "hide_enhanced_4g_lte_bool"
+    bool_value: true
+  }
+  config {
+    key: "hide_tty_hco_vco_with_rtt"
+    bool_value: true
+  }
+  config {
+    key: "ignore_rtt_mode_setting_bool"
+    bool_value: true
+  }
+  config {
+    key: "ims.enable_presence_publish_bool"
+    bool_value: false
+  }
+  config {
+    key: "ims_reasoninfo_mapping_string_array"
+    text_array {
+      item: "*|Call is dropped due to Wi-Fi signal is degraded|1407"
+    }
+  }
+  config {
+    key: "iwlan.diffie_hellman_groups_int_array"
+    int_array {
+      item: 14
+    }
+  }
+  config {
+    key: "iwlan.epdg_address_priority_int_array"
+    int_array {
+      item: 0
+      item: 1
+    }
+  }
+  config {
+    key: "iwlan.epdg_static_address_string"
+    text_value: "epdg.epc.mnc260.mcc310.pub.3gppnetwork.org"
+  }
+  config {
+    key: "iwlan.key_error_policy_config_string"
+    text_value: "[{\"ApnName\": \"*\",\"ErrorTypes\": [{\"ErrorType\": \"IKE_PROTOCOL_ERROR_TYPE\",\"ErrorDetails\": [\"10500\"],\"RetryArray\": [\"3600\",\"7200\",\"10800\"],\"UnthrottlingEvents\": [\"APM_ENABLE_EVENT\",\"WIFI_DISABLE_EVENT\",\"WIFI_CALLING_DISABLE_EVENT\"]},{\"ErrorType\": \"IKE_PROTOCOL_ERROR_TYPE\",\"ErrorDetails\": [\"11001\",\"11011\"],\"RetryArray\": [],\"UnthrottlingEvents\": []}]}]"
+  }
+  config {
+    key: "maxImageHeight"
+    int_value: 1944
+  }
+  config {
+    key: "maxImageWidth"
+    int_value: 2592
+  }
+  config {
+    key: "maxMessageSize"
+    int_value: 1048576
+  }
+  config {
+    key: "mmi_two_digit_number_pattern_string_array"
+    text_array {
+    }
+  }
+  config {
+    key: "mmsCloseConnection"
+    bool_value: true
+  }
+  config {
+    key: "non_roaming_operator_string_array"
+    text_array {
+      item: "310"
+      item: "311"
+      item: "312"
+      item: "313"
+      item: "314"
+      item: "315"
+      item: "316"
+    }
+  }
+  config {
+    key: "read_only_apn_types_string_array"
+    text_array {
+    }
+  }
+  config {
+    key: "recipientLimit"
+    int_value: 20
+  }
+  config {
+    key: "rtt_downgrade_supported_bool"
+    bool_value: true
+  }
+  config {
+    key: "rtt_supported_bool"
+    bool_value: true
+  }
+  config {
+    key: "show_data_connected_roaming_notification"
+    bool_value: true
+  }
+  config {
+    key: "smsToMmsTextThreshold"
+    int_value: 12
+  }
+  config {
+    key: "support_video_conference_call_bool"
+    bool_value: false
+  }
+  config {
+    key: "volte_replacement_rat_int"
+    int_value: 3
+  }
+  config {
+    key: "wfc_carrier_name_override_by_pnn_bool"
+    bool_value: true
+  }
+  config {
+    key: "wfc_operator_error_codes_string_array"
+    text_array {
+      item: "REG09|0"
+    }
+  }
+  config {
+    key: "wfc_spn_format_idx_int"
+    int_value: 1
+  }
+  config {
+    key: "wifi.avoid_5ghz_softap_for_laa_bool"
+    bool_value: true
+  }
+  config {
+    key: "wifi.avoid_5ghz_wifi_direct_for_laa_bool"
+    bool_value: true
+  }
+  config {
+    key: "wifi.carrier_profiles_version_int"
+    int_value: -1
+  }
+  config {
+    key: "wifi.passpoint_profiles_string_array"
+    text_array {
+    }
+  }
+}
+8 {
+  1: 1624467880
+}

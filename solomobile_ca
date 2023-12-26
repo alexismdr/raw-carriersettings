@@ -1,0 +1,69 @@
+canonical_name: "solomobile_ca"
+version: 30000000345
+apns {
+  apn {
+    name: "Solo Mobile"
+    value: "pda.bell.ca"
+    type: DEFAULT
+    type: DUN
+    type: HIPRI
+    type: IA
+    type: MMS
+    type: SUPL
+    mmsc: "http://mms.bell.ca/mms/wapenc"
+    protocol: IPV4V6
+    user_editable: false
+  }
+}
+configs {
+  config {
+    key: "emailGatewayNumber"
+    text_value: "6245"
+  }
+  config {
+    key: "hide_lte_plus_data_icon_bool"
+    bool_value: false
+  }
+  config {
+    key: "maxImageHeight"
+    int_value: 1944
+  }
+  config {
+    key: "maxImageWidth"
+    int_value: 2592
+  }
+  config {
+    key: "maxMessageSize"
+    int_value: 614400
+  }
+  config {
+    key: "maxSubjectLength"
+    int_value: 80
+  }
+  config {
+    key: "non_roaming_operator_string_array"
+    text_array {
+      item: "302"
+    }
+  }
+  config {
+    key: "read_only_apn_types_string_array"
+    text_array {
+    }
+  }
+  config {
+    key: "recipientLimit"
+    int_value: 20
+  }
+  config {
+    key: "smsToMmsTextThreshold"
+    int_value: 8
+  }
+  config {
+    key: "voicemail_notification_persistent_bool"
+    bool_value: true
+  }
+}
+8 {
+  1: 1622082274
+}

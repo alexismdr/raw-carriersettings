@@ -1,0 +1,215 @@
+canonical_name: "softbank_jp"
+version: 30000000321
+apns {
+  apn {
+    name: "IMS"
+    value: "ims"
+    type: IMS
+    bearer_bitmask: "14|18|20"
+    protocol: IPV6
+    roaming_protocol: IPV6
+    user_visible: false
+  }
+  apn {
+    name: "Application"
+    value: "plus.acs.jp.v6"
+    type: DEFAULT
+    type: MMS
+    type: SUPL
+    type: HIPRI
+    user: "ym"
+    password: "ym"
+    authtype: 2
+    mmsc: "http://mms-s"
+    mmsc_proxy: "andmms.plusacs.ne.jp"
+    mmsc_proxy_port: "8080"
+    protocol: IPV4V6
+    roaming_protocol: IPV4V6
+    user_editable: false
+  }
+  apn {
+    name: "Closed Networks[Enterprise]"
+    value: "cmn.mgx"
+    type: DEFAULT
+    type: SUPL
+    user: "cmn@mgx"
+    password: "mgx"
+    authtype: 1
+    protocol: IPV4V6
+    roaming_protocol: IPV4V6
+    user_editable: false
+  }
+}
+configs {
+  config {
+    key: "5g_icon_configuration_string"
+    text_value: "connected_mmwave:5G,connected:5G,not_restricted_rrc_idle:5G"
+  }
+  config {
+    key: "5g_icon_display_grace_period_string"
+    text_value: "connected_mmwave,legacy,31;connected,legacy,31;connected_mmwave,not_restricted_rrc_con,31;connected,not_restricted_rrc_con,31;not_restricted_rrc_idle,not_restricted_rrc_con,15"
+  }
+  config {
+    key: "allow_hold_call_during_emergency_bool"
+    bool_value: true
+  }
+  config {
+    key: "always_show_emergency_alert_onoff_bool"
+    bool_value: true
+  }
+  config {
+    key: "call_barring_over_ut_warning_bool"
+    bool_value: true
+  }
+  config {
+    key: "call_barring_supports_deactivate_all_bool"
+    bool_value: false
+  }
+  config {
+    key: "call_barring_supports_password_change_bool"
+    bool_value: false
+  }
+  config {
+    key: "call_barring_visibility_bool"
+    bool_value: true
+  }
+  config {
+    key: "call_forwarding_over_ut_warning_bool"
+    bool_value: true
+  }
+  config {
+    key: "call_waiting_over_ut_warning_bool"
+    bool_value: true
+  }
+  config {
+    key: "caller_id_over_ut_warning_bool"
+    bool_value: true
+  }
+  config {
+    key: "carrier_additional_cbs_channels_strings"
+    text_array {
+      item: "0xA800:type=earthquake, emergency=true"
+      item: "0xAFEE:type=tsunami, emergency=true"
+      item: "0xAC00-0xAFED:type=other, emergency=true"
+      item: "0xA802,0xA804:type=etws_default, emergency=true"
+    }
+  }
+  config {
+    key: "carrier_certificate_string_array"
+    text_array {
+      item: "8CD14DE82459630273B8D4C4F0C7C042FA0EF419C2B76A0AAD3D7A0646B015B9"
+    }
+  }
+  config {
+    key: "carrier_force_disable_etws_cmas_test_bool"
+    bool_value: true
+  }
+  config {
+    key: "carrier_supports_ss_over_ut_bool"
+    bool_value: true
+  }
+  config {
+    key: "carrier_ussd_method_int"
+    int_value: 2
+  }
+  config {
+    key: "carrier_volte_available_bool"
+    bool_value: true
+  }
+  config {
+    key: "default_vm_number_roaming_string"
+    text_value: "+819066514170"
+  }
+  config {
+    key: "default_vm_number_string"
+    text_value: "1416"
+  }
+  config {
+    key: "editable_voicemail_number_setting_bool"
+    bool_value: false
+  }
+  config {
+    key: "gps.es_extension_sec"
+    text_value: "300"
+  }
+  config {
+    key: "gps.lpp_profile"
+    text_value: "0"
+  }
+  config {
+    key: "gps.use_emergency_pdn_for_emergency_supl"
+    text_value: "0"
+  }
+  config {
+    key: "gsm_dtmf_tone_delay_int"
+    int_value: 300
+  }
+  config {
+    key: "ignore_data_enabled_changed_for_video_calls"
+    bool_value: true
+  }
+  config {
+    key: "ims_dtmf_tone_delay_int"
+    int_value: 300
+  }
+  config {
+    key: "ims_reasoninfo_mapping_string_array"
+    text_array {
+      item: "332||510"
+      item: "332|q.850|510"
+    }
+  }
+  config {
+    key: "is_ims_conference_size_enforced_bool"
+    bool_value: true
+  }
+  config {
+    key: "lte_endc_using_user_data_for_rrc_detection_bool"
+    bool_value: true
+  }
+  config {
+    key: "maxImageHeight"
+    int_value: 1944
+  }
+  config {
+    key: "maxImageWidth"
+    int_value: 2592
+  }
+  config {
+    key: "maxMessageSize"
+    int_value: 307200
+  }
+  config {
+    key: "nr_timers_reset_if_non_endc_and_rrc_idle_bool"
+    bool_value: true
+  }
+  config {
+    key: "read_only_apn_types_string_array"
+    text_array {
+      item: "ims"
+    }
+  }
+  config {
+    key: "recipientLimit"
+    int_value: -1
+  }
+  config {
+    key: "show_4g_for_lte_data_icon_bool"
+    bool_value: true
+  }
+  config {
+    key: "show_blocking_pay_phone_option_bool"
+    bool_value: true
+  }
+  config {
+    key: "vilte_data_is_metered_bool"
+    bool_value: false
+  }
+  config {
+    key: "volte_replacement_rat_int"
+    int_value: 3
+  }
+}
+8 {
+  1: 1628230265
+}
